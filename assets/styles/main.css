@@ -1,4 +1,4 @@
-html, body, div, span, header, h1, h2, h3, h4, h5, h6, nav, ul, li, a, p, form, input, label, button {
+html, body, div, span, header, h1, h2, h3, h4, h5, h6, nav, ul, li, a, p, form, input, label, button,#main-footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -153,5 +153,34 @@ html {
         margin-top: 1rem;
         height: 20rem;
         background-color: #EEE; }
-
+  #main-footer div {
+      display: block;
+      text-align: center;
+  }
+ #main-footer .validator {
+     display: inline-block;
+     padding: 15px 55px 25px 0px;
+ }
+#main-footer .footer-title {
+    font-family: fantasy;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+#main-footer ul {
+    text-align: center;
+}
+    #main-footer ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    #main-footer ul li:hover {
+        text-decoration: underline;
+    }
+        #main-footer ul li a {
+            color: darkblue;
+            font-size: 13px;
+            font-family: 'Forum', sans-serif;
+            font-weight: bold;
+        }
 /*# sourceMappingURL=main.css.map */
