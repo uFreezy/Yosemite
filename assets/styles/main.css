@@ -31,6 +31,10 @@ html {
         height: 4rem;
         width: 96rem;
         background-color: #EEE; }
+      #header-bar-wrapper #header-bar .logo img {
+          width: 320px;
+          height: 30px;
+      }
         html body #header-bar-wrapper #header-bar #header-main-navigation {
           display: inline-block;
           padding: 1rem;
@@ -59,7 +63,16 @@ html {
           bottom: 0.3rem; }
           html body #header-bar-wrapper #header-bar form input {
             padding: 0.5rem;
-            margin-left: 0.5rem; }
+            margin-left: 0.5rem;
+            width: 120px;
+            border-radius: 5px;
+            border: none;}
+            html body #header-bar-wrapper #header-bar form .login {
+                background-color: lawngreen;
+                width: 50px;
+                font-weight: bold;
+            }
+
     html body #wrapper {
       background-color: #333;
       width: 96rem;
