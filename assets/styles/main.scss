@@ -210,6 +210,18 @@ html {
                 background-size: 3.2 + $defaultFontUnit;
               }
             }
+            &.trash {
+              &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: baseline;
+                margin: 1 + $defaultFontUnit 0 0 0;
+                width: 3.2 + $defaultFontUnit;
+                height: 3.2 + $defaultFontUnit;
+                background: url("../UI/icons/trash-icon.png") 0 0 no-repeat;
+                background-size: 3.2 + $defaultFontUnit;
+              }
+            }
             .topic-info {
               padding: 0.5 + $defaultFontUnit;
               margin-left: 1 + $defaultFontUnit;

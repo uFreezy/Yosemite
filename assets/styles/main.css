@@ -173,6 +173,15 @@ html {
             height: 3.2rem;
             background: url("../UI/icons/sticky-icon.png") 0 0 no-repeat;
             background-size: 3.2rem; }
+        html body #wrapper #main-section article.category.trash:before {
+          content: '';
+          display: inline-block;
+          vertical-align: baseline;
+          margin: 1rem 0 0 0;
+          width: 3.2rem;
+          height: 3.2rem;
+          background: url("../UI/icons/trash-icon.png") 0 0 no-repeat;
+          background-size: 3.2rem; }
         html body #wrapper #main-section article.category .topic-info {
           padding: 0.5rem;
           margin-left: 1rem;
