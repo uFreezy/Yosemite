@@ -1,7 +1,13 @@
 <!--SECTION-->
 <section id="main-section">
     <header id="path">
-        <h1>PATH:// CATEGORY NAME/TOPIC NAME</h1>
+        <h1>
+            <?php
+            $DocumentSelf = dirname(__DIR__).'/'.basename($_SERVER['PHP_SELF'], '.php');
+            $DocumentSelf = str_replace('\\', '/', $DocumentSelf);
+            echo $DocumentSelf;
+            ?>
+        </h1>
     </header>
     <!--ARTICLE1-->
     <article class="important-category category sticky">
