@@ -69,25 +69,39 @@ html {
             margin-left: 0.5 + $defaultFontUnit;
             width: 15.4 + $defaultFontUnit;
             border: solid 0.1 + $defaultFontUnit #CCC;
-            background-color: #FFF;
-            &[type="submit"] {
-              cursor: pointer;
-              width: 6 +$defaultFontUnit;
-              outline: none;
-              background-color: rgba(155, 155, 155, 0.3);
-              border: solid 0.1 + $defaultFontUnit #AAA;
-              color: #FFF;
-            }
+            background-color: $white;
+//            &[type="submit"] {
+//              font-size: 1.4 + $defaultFontUnit;
+//              padding: 0.6 + $defaultFontUnit;
+//              cursor: pointer;
+//              width: 6 +$defaultFontUnit;
+//              outline: none;
+//              background-color: rgba(155, 155, 155, 0.3);
+//              border: solid 0.1 + $defaultFontUnit #AAA;
+//              color: $white;
+//            }
           }
           #login-btn:hover {
             background-color: rgba(0, 155, 0, 0.5);
             border: solid 0.1 + $defaultFontUnit #0F0;
-            color: #FFF;
+            color: $white;
+          }
+          #register-btn,
+          #login-btn {
+            margin-left: 0.4rem;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.4 + $defaultFontUnit;
+            padding: 0.55 + $defaultFontUnit;
+            width: 6 + $defaultFontUnit;
+            background-color: rgba(155, 155, 155, 0.3);
+            border: solid 0.1 + $defaultFontUnit #AAA;
+            color: $white;
           }
           #register-btn:hover {
             background-color: rgba(50, 100, 255, 0.5);
             border: solid 0.1 + $defaultFontUnit #09F;
-            color: #FFF;
+            color: $white;
           }
           #login-btn:hover, #register-btn:hover {
             -webkit-transition: color 1s, background-color 1s;
@@ -159,7 +173,7 @@ html {
       #main-section {
         #path {
 //          background-color: $themeSchemeColor;
-          background-color: #FFF;
+          background-color: $white;
           font-size: 1 + $defaultFontUnit;
           padding: 1 + $defaultFontUnit;
           border-top: solid 0.1 + $defaultFontUnit #CCC;

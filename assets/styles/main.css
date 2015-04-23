@@ -68,16 +68,20 @@ html {
             width: 15.4rem;
             border: solid 0.1rem #CCC;
             background-color: #FFF; }
-            html body #header-bar-wrapper #header-bar form input[type="submit"] {
-              cursor: pointer;
-              width: 6rem;
-              outline: none;
-              background-color: rgba(155, 155, 155, 0.3);
-              border: solid 0.1rem #AAA;
-              color: #FFF; }
           html body #header-bar-wrapper #header-bar form #login-btn:hover {
             background-color: rgba(0, 155, 0, 0.5);
             border: solid 0.1rem #0F0;
+            color: #FFF; }
+          html body #header-bar-wrapper #header-bar form #register-btn,
+          html body #header-bar-wrapper #header-bar form #login-btn {
+            margin-left: 0.4rem;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.4rem;
+            padding: 0.55rem;
+            width: 6rem;
+            background-color: rgba(155, 155, 155, 0.3);
+            border: solid 0.1rem #AAA;
             color: #FFF; }
           html body #header-bar-wrapper #header-bar form #register-btn:hover {
             background-color: rgba(50, 100, 255, 0.5);
