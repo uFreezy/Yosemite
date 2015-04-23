@@ -31,7 +31,7 @@ html {
       width: 100%; }
       html body #header-bar-wrapper #header-bar {
         margin: 0 auto;
-        height: 4rem;
+        height: 4.2rem;
         width: 96rem;
         background-color: #EEE; }
         html body #header-bar-wrapper #header-bar #main-heading {
@@ -53,7 +53,7 @@ html {
                 font-weight: bold; }
         html body #header-bar-wrapper #header-bar form {
           vertical-align: top;
-          margin-top: 0.55rem;
+          margin-top: 0.5rem;
           display: inline-block; }
           html body #header-bar-wrapper #header-bar form #password-recovery {
             margin-left: 0.4rem;
@@ -74,7 +74,7 @@ html {
             color: #FFF; }
           html body #header-bar-wrapper #header-bar form #register-btn,
           html body #header-bar-wrapper #header-bar form #login-btn {
-            margin-left: 0.4rem;
+            margin-left: 1rem;
             text-align: center;
             display: inline-block;
             font-size: 1.4rem;

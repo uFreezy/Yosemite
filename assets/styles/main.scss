@@ -23,7 +23,7 @@ html {
       width: 100%;
       #header-bar {
         margin: 0 auto;
-        height: 4 + $defaultFontUnit;
+        height: 4.2 + $defaultFontUnit;
         width: 96 + $defaultFontUnit;
         background-color: $themeSchemeColor;
         #main-heading {
@@ -53,7 +53,7 @@ html {
         }
         form {
           vertical-align: top;
-          margin-top: 0.55 + $defaultFontUnit;
+          margin-top: 0.5 + $defaultFontUnit;
           display: inline-block;
           #password-recovery {
             margin-left: 0.4 + $defaultFontUnit;
@@ -70,16 +70,6 @@ html {
             width: 15.4 + $defaultFontUnit;
             border: solid 0.1 + $defaultFontUnit #CCC;
             background-color: $white;
-//            &[type="submit"] {
-//              font-size: 1.4 + $defaultFontUnit;
-//              padding: 0.6 + $defaultFontUnit;
-//              cursor: pointer;
-//              width: 6 +$defaultFontUnit;
-//              outline: none;
-//              background-color: rgba(155, 155, 155, 0.3);
-//              border: solid 0.1 + $defaultFontUnit #AAA;
-//              color: $white;
-//            }
           }
           #login-btn:hover {
             background-color: rgba(0, 155, 0, 0.5);
@@ -88,7 +78,7 @@ html {
           }
           #register-btn,
           #login-btn {
-            margin-left: 0.4rem;
+            margin-left: 1rem;
             text-align: center;
             display: inline-block;
             font-size: 1.4 + $defaultFontUnit;
