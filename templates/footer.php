@@ -4,27 +4,24 @@
         <h1>Powered by: Yosemite Team</h1>
         <div>
             <p>
+<!--                Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.-->
+<!--                No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.-->
+<!--                No quem salutandi ullamcorper ius, per virtute appetere in.-->
+<!--                Habeo ipsum fugit mel an, iriure evertitur pri ad.-->
                 Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.
                 No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.
-                No quem salutandi ullamcorper ius, per virtute appetere in.
-                Habeo ipsum fugit mel an, iriure evertitur pri ad.
-
             </p>
         </div>
         <div>
             <p>
                 Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.
                 No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.
-                No quem salutandi ullamcorper ius, per virtute appetere in.
-                Habeo ipsum fugit mel an, iriure evertitur pri ad.
             </p>
         </div>
         <div>
             <p>
                 Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.
                 No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.
-                No quem salutandi ullamcorper ius, per virtute appetere in.
-                Habeo ipsum fugit mel an, iriure evertitur pri ad.
             </p>
         </div>
     </div>
