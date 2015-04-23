@@ -1,0 +1,282 @@
+@import 'reset';
+@import 'theme';
+//@import 'crossBrowsers'; //MOBILE VERSIONS AKA RESPONSIVE
+@font-face {
+  font-family: 'Forum';
+  src: url('../fonts/Forum-Regular.otf');
+}
+@font-face {
+  font-family: 'Custum';
+  src: url('../fonts/Custum.woff2');
+}
+
+html {
+  font: $defaultFontSize + px $defaultFontFamily, sans-serif;
+  color: $defaultFontColor;
+  body {
+    font-family: 'Custum', serif;
+    background-color: $bodySchemeColor;
+    #header-bar-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      #header-bar {
+        margin: 0 auto;
+        height: 4 + $defaultFontUnit;
+        width: 96 + $defaultFontUnit;
+        background-color: $themeSchemeColor;
+        #main-heading {
+          display: inline-block;
+          vertical-align: top;
+          a {
+            #company-logo {
+              vertical-align: top;
+            }
+          }
+        }
+        #header-main-navigation {
+          display: inline-block;
+          padding: 1 + $defaultFontUnit 0 1 + $defaultFontUnit 0;
+          font-size: $mainNavFontSize;
+          ul {
+            display: inline-block;
+            li {
+              margin-left: 1 + $defaultFontUnit;
+              display: inline-block;
+              a {
+                color: $mainNavFontColor;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        form {
+          vertical-align: top;
+          margin-top: 0.55 + $defaultFontUnit;
+          display: inline-block;
+          #password-recovery {
+            margin-left: 0.4 + $defaultFontUnit;
+            color: $grey;
+            font-size: 1.2 + $defaultFontUnit;
+            text-decoration: underline;
+            &:hover {
+              color: #F00;
+            }
+          }
+          input {
+            padding: 0.5 + $defaultFontUnit;
+            margin-left: 0.5 + $defaultFontUnit;
+            width: 15.4 + $defaultFontUnit;
+            border: solid 0.1 + $defaultFontUnit #CCC;
+            background-color: #FFF;
+            &[type="submit"] {
+              cursor: pointer;
+              width: 6 +$defaultFontUnit;
+              outline: none;
+              background-color: rgba(155, 155, 155, 0.3);
+              border: solid 0.1 + $defaultFontUnit #AAA;
+              color: #FFF;
+            }
+          }
+          #login-btn:hover {
+            background-color: rgba(0, 155, 0, 0.5);
+            border: solid 0.1 + $defaultFontUnit #0F0;
+            color: #FFF;
+          }
+          #register-btn:hover {
+            background-color: rgba(50, 100, 255, 0.5);
+            border: solid 0.1 + $defaultFontUnit #09F;
+            color: #FFF;
+          }
+          #login-btn:hover, #register-btn:hover {
+            -webkit-transition: color 1s, background-color 1s;
+            -moz-transition: color 1s, background-color 1s;
+            -ms-transition: color 1s, background-color 1s;
+            -o-transition: color 1s, background-color 1s;
+            transition: color 1s, background-color 1s, border 1s;
+          }
+        }
+      }
+    }
+    #wrapper {
+      background-color: #333;
+      width: 96 + $defaultFontUnit;
+      margin: 2 + $defaultFontUnit auto;
+      #fake-header {
+        height: 31.6 + $defaultFontUnit;
+        background: url("../../assets/UI/banner.jpg") no-repeat #EEE;
+        background-size: cover;
+        #header-bar-extended {
+          background-color: $themeSchemeColor;
+          padding: 2 + $defaultFontUnit;
+          label {
+            font-size: 1.6 + $defaultFontUnit;
+            font-weight: bold;
+            color: $grey;
+            margin-right: 1 + $defaultFontUnit;
+          }
+        }
+        p {
+          font-size: 1.4 + $defaultFontUnit;
+          padding: 1 + $defaultFontUnit;
+          color: $white;
+        }
+      }
+      #agreements {
+        position: relative;
+        top: 18 + $defaultFontUnit;
+        background-color: rgba(155, 155, 155, 0.8);
+        padding: 0.4 + $defaultFontUnit;
+        font-family: 'Forum', sans-serif;
+        font-size: $agreementsFontSize;
+        color: $white;
+        text-align: right;
+        a {
+          text-decoration: underline;
+          color: $black;
+          &:hover {
+            color: $white;
+          }
+        }
+        #accept-agreements {
+          display: inline-block;
+          padding: 0.4 + $defaultFontUnit;
+          margin-left: 4 + $defaultFontUnit;
+          background-color: rgba(255, 255, 255, 0.2);
+          text-decoration: none;
+          border: solid 0.1 + $defaultFontUnit #EEE;
+          &:hover {
+            background-color: #555;
+            -webkit-transition: background-color 2.5s;
+            -moz-transition: background-color 2.5s;
+            -ms-transition: background-color 2.5s;
+            -o-transition: background-color 2.5s;
+            transition: background-color 2.5s;
+          }
+        }
+      }
+      #main-section {
+        #path {
+//          background-color: $themeSchemeColor;
+          background-color: #FFF;
+          font-size: 1 + $defaultFontUnit;
+          padding: 1 + $defaultFontUnit;
+          border-top: solid 0.1 + $defaultFontUnit #CCC;
+          border-bottom-left-radius: 0.5 + $defaultFontUnit;
+          border-bottom-right-radius: 0.5 + $defaultFontUnit;
+        }
+        article {
+          &.category {
+            background-color: $themeSchemeColor;
+            padding: 1 + $defaultFontUnit;
+            margin-top: 1 + $defaultFontUnit;
+            font-size: $categoriesFontSize;
+//            height: 6 + $defaultFontUnit;
+            &:before {
+              content: '';
+              display: inline-block;
+              vertical-align: baseline;
+              margin: 1 + $defaultFontUnit 0 0 0;
+              width: 3.2 + $defaultFontUnit;
+              height: 3.2 + $defaultFontUnit;
+              background: url("../UI/icons/topic-icon.png") 0 0 no-repeat;
+              background-size: 3.2 + $defaultFontUnit;
+            }
+            &.sticky {
+              background-color: #DDD;
+              &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: baseline;
+                margin: 1 + $defaultFontUnit 0 0 0;
+                width: 3.2 + $defaultFontUnit;
+                height: 3.2 + $defaultFontUnit;
+                background: url("../UI/icons/sticky-icon.png") 0 0 no-repeat;
+                background-size: 3.2 + $defaultFontUnit;
+              }
+            }
+            .topic-info {
+              padding: 0.5 + $defaultFontUnit;
+              margin-left: 1 + $defaultFontUnit;
+              display: inline-block;
+              header {
+                h1 {
+                  a {
+                    color: $defaultFontColor;
+                  }
+                }
+              }
+              footer {
+                .topic-creator {
+                  background: url("../UI/icons/head.svg") 0 0.5 + $defaultFontUnit no-repeat;
+                }
+                .topic-date-creation {
+                  background: url("../UI/icons/clock.svg") 0 0.5 + $defaultFontUnit no-repeat;
+                }
+                .topic-tag {
+                  background: url("../UI/icons/tag.svg") 0 0.5 + $defaultFontUnit no-repeat;
+                }
+                .topic-meta {
+                  display: inline-block;
+                  margin: 0.8 + $defaultFontUnit 0 0 2 + $defaultFontUnit;
+                  padding-left: 2.6 + $defaultFontUnit;
+                  font-size: 2 + $defaultFontUnit;
+                  color: $defaultFontColor;
+                  background-size: 2 + $defaultFontUnit;
+                  cursor: default;
+                  &:first-child {
+                    cursor: pointer;
+                    margin-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      #main-footer {
+        margin-top: 1 + $defaultFontUnit;
+        background-color: $themeSchemeColor;
+        color: #666;
+        #footer-top {
+          padding: 1 + $defaultFontUnit;
+          text-align: center;
+          height: 100%;
+          div {
+            font-size: 1.4 + $defaultFontUnit;
+            vertical-align: top;
+            margin-left: 1 + $defaultFontUnit;
+            padding: 1 + $defaultFontUnit;
+            display: inline-block;
+            width: 30%;
+            height: 70%;
+            border-right: dashed 0.1 + $defaultFontUnit #666;
+            &:first-of-type {
+              margin-left: 0;
+            }
+            &:last-of-type {
+              border: none;
+            }
+            p {
+              text-align: left;
+            }
+          }
+          h1 {
+            padding: 1 + $defaultFontUnit;
+          }
+        }
+        #footer-bottom {
+          background-color: #DDD;
+          text-align: center;
+          padding: 1 + $defaultFontUnit;
+          border-bottom: solid 1 + $defaultFontUnit #EEE;
+          .validator {
+            display: inline-block;
+            margin-left: 1 + $defaultFontUnit;
+          }
+        }
+      }
+    }
+  }
+}
