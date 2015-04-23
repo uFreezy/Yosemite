@@ -56,7 +56,7 @@ html {
           margin-top: 0.5rem;
           display: inline-block; }
           html body #header-bar-wrapper #header-bar form #password-recovery {
-            margin-left: 0.4rem;
+            margin-left: 1rem;
             color: #777;
             font-size: 1.2rem;
             text-decoration: underline; }
@@ -74,7 +74,7 @@ html {
             color: #FFF; }
           html body #header-bar-wrapper #header-bar form #register-btn,
           html body #header-bar-wrapper #header-bar form #login-btn {
-            margin-left: 1rem;
+            margin-left: 0.4rem;
             text-align: center;
             display: inline-block;
             font-size: 1.4rem;
@@ -83,6 +83,8 @@ html {
             background-color: rgba(155, 155, 155, 0.3);
             border: solid 0.1rem #AAA;
             color: #FFF; }
+          html body #header-bar-wrapper #header-bar form #login-btn {
+            margin-left: 1rem; }
           html body #header-bar-wrapper #header-bar form #register-btn:hover {
             background-color: rgba(50, 100, 255, 0.5);
             border: solid 0.1rem #09F;

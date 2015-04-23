@@ -56,7 +56,7 @@ html {
           margin-top: 0.5 + $defaultFontUnit;
           display: inline-block;
           #password-recovery {
-            margin-left: 0.4 + $defaultFontUnit;
+            margin-left: 1 + $defaultFontUnit;
             color: $grey;
             font-size: 1.2 + $defaultFontUnit;
             text-decoration: underline;
@@ -78,7 +78,7 @@ html {
           }
           #register-btn,
           #login-btn {
-            margin-left: 1rem;
+            margin-left: 0.4rem;
             text-align: center;
             display: inline-block;
             font-size: 1.4 + $defaultFontUnit;
@@ -87,6 +87,9 @@ html {
             background-color: rgba(155, 155, 155, 0.3);
             border: solid 0.1 + $defaultFontUnit #AAA;
             color: $white;
+          }
+          #login-btn {
+            margin-left: 1rem;
           }
           #register-btn:hover {
             background-color: rgba(50, 100, 255, 0.5);
