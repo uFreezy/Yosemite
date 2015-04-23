@@ -17,9 +17,11 @@ $(document).ready(function () {
     //CLICK LISTENER LOGIN
     $('#login-btn').click(function () {
         var formStatus = '<input id="form-status" type="hidden" name="status" value="submitted"/>';
-        $('#login-form').append(formStatus);
-        if ($('#form-status').val()) {
-            $('#login-form').submit();
+        var loginForm = $('#login-form');
+        loginForm.append(formStatus);
+
+        if ($('#form-status').val() === 'submitted') {
+            loginForm.submit();
         }
     });
 });
