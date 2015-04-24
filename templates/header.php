@@ -35,24 +35,18 @@
             </ul>
         </nav>
         <!--LOGIN-->
-
         <?php
-            include 'login.php';
-        if(!isset($_SESSION['username'])) { ?>
-        <form id="login-form" method="post" action=""> <!--method="post" DEBUG-->
-            <input type="text" name="username-login" maxlength="40" placeholder="User Name..."/>
-            <input type="password" name="password-login" maxlength="40" placeholder="Password..."/>
-            <a href="#" id="password-recovery" title="recover your password">forgotten?</a>
-<!--            <input id="form-status" type="hidden" name="status" value=""/>-->
-            <a href="#" title="Login" id="login-btn">Login</a>
-            <?php
-            echo "<a href=\"$path/templates/register.php\" title=\"Register\" id=\"register-btn\">Register</a>";
-            ?>
-        </form>
-        <?php }
-            else {
-                echo "Welcome, " . $_SESSION['username'];
-            }
+        if($IsNotLogged) {
+        echo "<form id=\"login-form\" method=\"post\" action=\"\">
+                <input type=\"text\" name=\"username-login\" maxlength=\"40\" placeholder=\"User Name...\"/>
+                <input type=\"password\" name=\"password-login\" maxlength=\"40\" placeholder=\"Password...\"/>
+                <a href=\"#\" id=\"password-recovery\" title=\"recover your password\">forgotten?</a>
+                <a href=\"#\" title=\"Login\" id=\"login-btn\">Login</a>;
+                <a href=\"$path/templates/register.php\" title=\"Register\" id=\"register-btn\">Register</a>
+             </form>";
+        } else {
+            echo $welcomeMessage;
+        }
         ?>
     </header>
 </div>

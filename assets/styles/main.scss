@@ -112,7 +112,7 @@ html {
       margin: 2 + $defaultFontUnit auto;
       #fake-header {
         height: 31.6 + $defaultFontUnit;
-        background: url("../../assets/UI/banner.jpg") no-repeat #EEE;
+        background: url("../UI/banner.jpg") no-repeat #EEE;
         background-size: cover;
         #header-bar-extended {
           background-color: $themeSchemeColor;

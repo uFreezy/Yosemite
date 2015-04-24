@@ -2,8 +2,16 @@
 //YOUR LOGIC HERE
 $path = './';
 $stylesPath = 'assets/styles/main.css';
-//AFTER HEADER LOGIC INCLUDE HEADER
-//TODO...REGISTER FORM/LOGIN
+
+//LOGIN NOTICE login.php is here and your variables/logic is here
+// then you use your variables/logic from here into PHP TEMPLATES
+//AD THERE STAY MOSTLY AN HTML SYNTAX
+
+include "login.php";
+$IsNotLogged = !isset($_SESSION['username']);
+$welcomeMessage = "Welcome, " . $_SESSION['username'];
+
+//HEADER
 include 'templates/header.php';
 
 //AFTER ARTICLES LOGIC INCLUDE ARTICLE

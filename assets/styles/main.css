@@ -101,7 +101,7 @@ html {
       margin: 2rem auto; }
       html body #wrapper #fake-header {
         height: 31.6rem;
-        background: url("../../assets/UI/banner.jpg") no-repeat #EEE;
+        background: url("../UI/banner.jpg") no-repeat #EEE;
         background-size: cover; }
         html body #wrapper #fake-header #header-bar-extended {
           background-color: #EEE;
