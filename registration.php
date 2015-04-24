@@ -21,7 +21,7 @@
 
     if(preg_match('/(\W)|(\d)/',$fullname) || $fullname == "") {
         if(preg_match('/(\W)|(\d)/',$fullname)) {
-            exit("Name cant contain special charecters or digits");
+            exit("Name cant contain special charеcters or digits");
         }
         else {
             exit("Name cant be empty");
@@ -48,5 +48,4 @@
     {
         echo "YOUR REGISTRATION IS COMPLETED...";
     }
-
 ?>

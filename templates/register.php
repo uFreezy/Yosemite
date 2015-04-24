@@ -10,7 +10,7 @@
     <!--HEADER-->
     <header id="header-bar">
         <!--MAIN HEADING/LOGO-->
-        <a href="#" title="Alpha-Programming" class="logo"><img src="img/coollogo_com-15949304.png" alt=""/></a>
+        <a href="#" title="Alpha-Programming" class="logo"><img src="../assets/UI/alpha-programming-logo.png" alt=""/></a>
         <!--MAIN NAVIGATION-->
         <nav id="header-main-navigation">
             <ul>
@@ -25,12 +25,12 @@
     <div id="form">
         <h1>Registration</h1>
         <form action="" method="post">
-            <input type="text" name="fullname" placeholder="Full name"/>
+                <input type="text" name="fullName" placeholder="Full Name..." class="fullName"/>
 <!--            <input type="text" name="lastName" placeholder="Last Name..."/>-->
-            <input type="email" name="email" placeholder="Email..."/>
-            <input type="text" name="username" placeholder="Username..."/>
-            <input type="password" name="password" placeholder="Password..."/>
-            <input type="submit" name="submitRegistration" value="Register"/>
+            <input type="email" name="email" placeholder="Email..." class="email"/>
+            <input type="text" name="username" placeholder="Username..." class="userName"/>
+            <input type="password" name="password" placeholder="Password..." class="password"/>
+            <input type="submit" name="submitRegistration" value="Register" class="submit"/>
         </form>
     </div>
     <footer id="main-footer">
