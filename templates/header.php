@@ -40,7 +40,7 @@
         echo "<form id=\"login-form\" method=\"post\" action=\"\">
                 <input type=\"text\" name=\"username-login\" maxlength=\"40\" placeholder=\"User Name...\"/>
                 <input type=\"password\" name=\"password-login\" maxlength=\"40\" placeholder=\"Password...\"/>
-                <a href=\"#\" id=\"password-recovery\" title=\"recover your password\">forgotten?</a>
+                <a href=\"$path/templates/forgotPassword.php\" id=\"password-recovery\" title=\"recover your password\">forgotten?</a>
                 <a href=\"#\" title=\"Login\" id=\"login-btn\">Login</a>;
                 <a href=\"$path/templates/register.php\" title=\"Register\" id=\"register-btn\">Register</a>
              </form>";
