@@ -4,7 +4,8 @@
     define('DB_USER','root');
     define('DB_PASSWORD','root');
 
-    if(isset($_POST['status'])) {
+    if(isset($_POST['status']) && $_POST['status'] != NULL) {
+        echo 'alpha';
         $username = $_POST["username-login"];
         $password = $_POST["password-login"];
         $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); // I have no idea what this does
@@ -14,7 +15,7 @@
             $stmt->bind_param('s', $username);  // Bind "$username" to parameter.
             $stmt->execute();    // Execute the prepared query.
             $stmt->store_result();
-            session_start();
+           // session_start();
 
             // get variables from result.
             $stmt->bind_result($user_id, $username, $db_password);

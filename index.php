@@ -7,9 +7,12 @@ $stylesPath = 'assets/styles/main.css';
 // then you use your variables/logic from here into PHP TEMPLATES
 //AD THERE STAY MOSTLY AN HTML SYNTAX
 
+session_start();
+
 include "login.php";
 $IsNotLogged = !isset($_SESSION['username']);
 if(isset($_SESSION['username'])) {
+
     $welcomeMessage = "Welcome, " . $_SESSION['username'];
 }
 //HEADER
