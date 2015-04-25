@@ -115,6 +115,14 @@ html body #header-bar-wrapper #header-bar form .login {
     padding: 10px;
     border-radius: 20px 0px 20px 0px ;
 }
+#form form .submit:hover {
+    background-color: green;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
 #main-footer div {
     display: block;
     text-align: center;
