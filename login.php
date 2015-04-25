@@ -4,8 +4,7 @@
     define('DB_USER','root');
     define('DB_PASSWORD','root');
 
-    if(isset($_POST['status']) && $_POST['status'] != NULL) {
-        echo 'alpha';
+    if(isset($_POST['status']) && $_POST['status'] != NULL && !isset($_SESSION['username'])) {
         $username = $_POST["username-login"];
         $password = $_POST["password-login"];
         $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); // I have no idea what this does
