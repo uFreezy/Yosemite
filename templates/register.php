@@ -10,7 +10,7 @@
     <!--HEADER-->
     <header id="header-bar">
         <!--MAIN HEADING/LOGO-->
-        <a href="#" title="Alpha-Programming" class="logo"><img src="../assets/UI/alpha-programming-logo.png" alt=""/></a>
+        <a href="../index.php" title="Alpha-Programming" class="logo"><img src="../assets/UI/alpha-programming-logo.png" alt=""/></a>
         <!--MAIN NAVIGATION-->
         <nav id="header-main-navigation">
             <ul>
@@ -26,7 +26,6 @@
         <h1>Registration</h1>
         <form action="" method="post">
                 <input type="text" name="fullName" placeholder="Full Name..." class="fullName"/>
-<!--            <input type="text" name="lastName" placeholder="Last Name..."/>-->
             <input type="email" name="email" placeholder="Email..." class="email"/>
             <input type="text" name="username" placeholder="Username..." class="userName"/>
             <input type="password" name="password" placeholder="Password..." class="password"/>
@@ -64,10 +63,12 @@
     $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
     if(isset($_POST['submitRegistration'])) {
-        $fullname = $_POST["fullname"];
+        $fullname = $_POST["fullName"];
         $username = $_POST["username"];
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
+        $secretQuestion = $_POST['securityQuestion'];
+        $secretAnswer = $_POST['answer'];
 
         if(preg_match('/(\W)|(\d)/',$fullname) || $fullname == "") {
             if(preg_match('/(\W)|(\d)/',$fullname)) {
@@ -79,8 +80,8 @@
                 exit(); // This is to stop the code from executing any further.
             }
         }
-        if(preg_match('/\W/',$username)) {
-            echo"Username can't contain special charecters";
+        if(preg_match('/\W/',$username) && strlen($username) < 3) {
+            echo"Username can't contain special charecters and cant be under 3 symbols";
             exit(); // This is to stop the code from executing any further.
         }
         if(!preg_match('/\W/',$username)) {
@@ -93,15 +94,28 @@
             }
         }
         if(!filter_var($email, FILTER_VALIDATE_EMAIL) === true) {
-            exit("Invalid email adress.");
+            echo"Invalid email adress.";
+            exit();
+        }
+        else {
+            $line = mysql_query("SELECT * FROM websiteusers WHERE email = '$_POST[email]'") or die(mysql_error());
+
+            if($row = mysql_fetch_array($line))
+            {
+                echo"User with that email  already exists!";
+                exit(); // This is to stop the code from executing any further.
+            }
+        }
+        if($secretQuestion == 0 || $secretAnswer == '') {
+            echo "Invalid security data.";
             exit();
         }
 
-        $query = "INSERT INTO websiteusers (fullname,userName,email,pass) VALUES ('$fullname','$username','$email','$password')";
+        $query = "INSERT INTO websiteusers (fullname,userName,email,pass,secret_question,secret_answer,is_admin)
+                  VALUES ('$fullname','$username','$email','$password','$secretQuestion','$secretAnswer','false')";
         $data = mysql_query ($query)or die(mysql_error());
         if($data)
         {
-
             echo "YOUR REGISTRATION IS COMPLETED...";
         }
 

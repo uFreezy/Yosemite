@@ -9,8 +9,9 @@ $stylesPath = 'assets/styles/main.css';
 
 include "login.php";
 $IsNotLogged = !isset($_SESSION['username']);
-$welcomeMessage = "Welcome, " . $_SESSION['username'];
-
+if(isset($_SESSION['username'])) {
+    $welcomeMessage = "Welcome, " . $_SESSION['username'];
+}
 //HEADER
 include 'templates/header.php';
 
