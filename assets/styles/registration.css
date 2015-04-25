@@ -99,6 +99,15 @@ html body #header-bar-wrapper #header-bar form .login {
         font-family: 'Forum', sans-serif;
         font-size: 20px;
     }
+    #form form select {
+        margin: 15px;
+        padding: 8px 8px 8px 35px;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Forum', sans-serif;
+        font-size: 20px;
+        width: 240px;
+    }
     #form form .fullName {
         background: url("../UI/icons/fullName.png") no-repeat #FFF 8px 8px;
     }
@@ -110,6 +119,9 @@ html body #header-bar-wrapper #header-bar form .login {
 }
 #form form .password {
     background: url("../UI/icons/pass.png") no-repeat #FFF 8px 8px;
+}
+#form form .answer {
+    background: url("../UI/icons/answer.png") no-repeat #FFF 8px 8px;
 }
 #form form .submit {
     padding: 10px;

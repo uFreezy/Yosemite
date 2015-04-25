@@ -30,6 +30,14 @@
             <input type="email" name="email" placeholder="Email..." class="email"/>
             <input type="text" name="username" placeholder="Username..." class="userName"/>
             <input type="password" name="password" placeholder="Password..." class="password"/>
+            <select name="securityQuestion" class="answer">
+                <option value="">-Security Question-</option>
+                <option value="1">What is your favourite programming language?</option>
+                <option value="2">How many programming languages do you know?</option>
+                <option value="3">Which IDE do you prefer?</option>
+                <option value="4">What is the first name of the person you first kissed?</option>
+            </select>
+            <input type="text" name="answer" placeholder="Security answer..." class="answer"/>
             <input type="submit" name="submitRegistration" value="Register" class="submit"/>
         </form>
     </div>
