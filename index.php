@@ -9,7 +9,6 @@ $mainStyle = 'assets/styles/main.css';
 
 
 session_start();
-echo session_status();
 include "login.php";
 
 $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
