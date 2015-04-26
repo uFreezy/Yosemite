@@ -51,6 +51,8 @@ html body .container #modal {
       cursor: pointer;
       color: #aaa;
       font-size: 1.6rem; }
+      html body .container #modal .popupHeader .modal_close:hover {
+        background-color: rgba(255, 0, 0, 0.6); }
     html body .container #modal .popupHeader .header_title {
       color: #AAA; }
   html body .container #modal .popupBody {
@@ -70,7 +72,8 @@ html body .container #modal {
         margin-left: 1rem; }
       html body .container #modal .popupBody #topic-wizard .topic-label {
         font-size: 1.4rem;
-        color: #666; }
+        color: #666;
+        cursor: pointer; }
         html body .container #modal .popupBody #topic-wizard .topic-label:nth-of-type(4) {
           display: block;
           margin-top: 1rem; }

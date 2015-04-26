@@ -60,6 +60,9 @@ html {
             cursor: pointer;
             color: #aaa;
             font-size: 1.6rem;
+            &:hover {
+              background-color: rgba(255,0, 0, 0.6);
+            }
           }
           .header_title {
             color: #AAA;
@@ -85,6 +88,7 @@ html {
             .topic-label {
               font-size: 1.4rem;
               color: #666;
+              cursor: pointer;
               &:nth-of-type(4) {
                 display: block;
                 margin-top: 1rem;

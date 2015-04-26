@@ -16,7 +16,7 @@
                 <label class="topic-label" for="topic-content">Your message...</label>
                 <textarea name="topicContent" id="topic-content" cols="30" rows="10" placeholder="Type..." required="required"></textarea>
                 <!--TOPIC CATEGORY-->
-                <label class="topic-label" for="topic-category">Category</label>
+                <label class="topic-label" for="category-select">Category</label>
                 <select id="category-select" name="topicCategory" id="topic-category">
                     <option value="faq">FAQ</option>
                     <option value="events">Events</option>
