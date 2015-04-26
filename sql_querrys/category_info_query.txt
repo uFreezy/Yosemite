@@ -9,10 +9,10 @@ last_topic_name VARCHAR(40) NOT NULL,
 PRIMARY KEY(catID)
 );
 
-INSERT INTO catinfo (cat_name) VALUES ("FAQ")
-INSERT INTO catinfo (cat_name) VALUES ("Events")
-INSERT INTO catinfo (cat_name) VALUES ("General discussion")
-INSERT INTO catinfo (cat_name) VALUES ("News")
-INSERT INTO catinfo (cat_name) VALUES ("Feedback - Suggestions/Bugs")
-INSERT INTO catinfo (cat_name) VALUES ("Spam - Talk about everything")
-INSERT INTO catinfo (cat_name) VALUES ("Trash")
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("FAQ",1)
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("Events",2)
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("General discussion",3)
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("News",3)
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("Feedback - Suggestions/Bugs",3)
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("Spam - Talk about everything",3)
+INSERT INTO catinfo (cat_name,cat_icon) VALUES ("Trash",4)

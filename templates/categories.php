@@ -12,6 +12,7 @@
     <?php
     $sql = "SELECT
                     cat_name,
+                    cat_icon,
                     last_topic_by,
                     last_topic_date,
                     last_topic_name
@@ -28,7 +29,21 @@
     }
     while($row = mysql_fetch_assoc($result))
     {
-        echo'<article class="important-category category sticky">';
+        switch($row['cat_icon']) {
+            case 1:
+                echo'<article class="important-category category sticky">';
+                break;
+            case 2:
+                echo'<article class="category sticky">';
+                break;
+            case 3:
+                echo'<article class="category">';
+                break;
+            case 4:
+                echo'<article class="category trash">';
+                break;
+            default:
+        }
         echo'<div class="topic-info">';
             echo'<header>';
                 echo'<h1>';

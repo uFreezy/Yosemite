@@ -1,11 +1,11 @@
 CREATE TABLE WebsiteTopics
 (
 topicID int(9) NOT NULL auto_increment,
-topicIcon INTEGER NOT NULL,
-topicName VARCHAR(40) NOT NULL,
-topicContent VARCHAR(2000) NOT NULL,
-postedBy VARCHAR(40) NOT NULL,
-postedDate DATE NOT NULL,
-postedTags VARCHAR(100) NOT NULL,
+topic_icon INTEGER NOT NULL,
+topic_name VARCHAR(40) NOT NULL,
+topic_content VARCHAR(2000) NOT NULL,
+posted_by VARCHAR(40) NOT NULL,
+posted_date DATE NOT NULL,
+posted_tags VARCHAR(100) NOT NULL,
 PRIMARY KEY(topicID)
 );
