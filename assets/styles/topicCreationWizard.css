@@ -5,11 +5,13 @@ html, body, form, input, label, button {
   box-sizing: border-box; }
 
 html body .container #modal_trigger {
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #666;
+  padding: 1rem;
   background: #EEE;
   border: solid 0.1rem #CCC;
-  margin: 1rem auto;
+  margin: 1rem 0;
   width: 10rem;
   display: block;
   text-decoration: none; }
