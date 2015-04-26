@@ -2,20 +2,29 @@
 $path = '../';
 $stylesPath = '../assets/styles/main.css';
 
-$IsNotLogged = !isset($_SESSION['username']);
-if(isset($_SESSION['username'])) {
+session_start(); // This is required in every file so $_SESSION stays active.
 
-    $welcomeMessage = "Welcome, " . $_SESSION['username'];
-}
-include 'header.php';
+include "../login.php";
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'sitetest');
-define('DB_USER','root');
-define('DB_PASSWORD','root');
-
+// Connection to the database
 $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
 $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
+
+$IsNotLogged = !isset($_SESSION['username']);
+if(isset($_SESSION['username'])) {
+    $line = mysql_query("SELECT * FROM websiteusers WHERE userName = '$_SESSION[username]'") or die(mysql_error());
+    $line = mysql_fetch_array($line);
+
+    if($line['is_admin']) {
+        $welcomeMessage = "Welcome, " . "<a href='#'><span style='color: red'>" . $_SESSION['username']. "</span></a>";
+    }
+    else {
+        $welcomeMessage = "Welcome, " .  $_SESSION['username'];
+    }
+}
+
+include 'header.php';
+
 ?>
 
 <section id="main-section">

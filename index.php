@@ -7,8 +7,9 @@ $mainStyle = 'assets/styles/main.css';
 // then you use your variables/logic from here into PHP TEMPLATES
 //AD THERE STAY MOSTLY AN HTML SYNTAX
 
-session_start();
 
+session_start();
+echo session_status();
 include "login.php";
 
 $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
