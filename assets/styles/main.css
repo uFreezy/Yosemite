@@ -178,6 +178,125 @@ html {
         border-top: solid 0.1rem #CCC;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem; }
+      html body #wrapper #main-section article.generated-thread {
+        background-color: #BBB;
+        padding: 2rem; }
+        html body #wrapper #main-section article.generated-thread .generated-thread-heading {
+          background-color: #DDD; }
+          html body #wrapper #main-section article.generated-thread .generated-thread-heading h1 {
+            font-size: 2.8rem;
+            padding-top: 0.5rem;
+            color: #444;
+            text-align: center;
+            background-color: #CCC; }
+        html body #wrapper #main-section article.generated-thread .generated-thread-footer {
+          background-color: #CCC;
+          padding: 0 0 2rem 2rem;
+          font-size: 2rem; }
+          html body #wrapper #main-section article.generated-thread .generated-thread-footer .user-img {
+            border: solid 0.1rem #FFF;
+            margin-right: 2rem;
+            vertical-align: middle; }
+          html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-created-by {
+            display: inline-block;
+            color: #000;
+            margin-right: 2rem; }
+            html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-created-by:before {
+              content: '';
+              display: inline-block;
+              height: 1rem;
+              vertical-align: bottom;
+              padding: 1.2rem;
+              margin: 0 1rem 0 0;
+              background: url("../UI/icons/head.svg") no-repeat 0 0.8rem;
+              background-size: 2.4rem; }
+            html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-created-by:hover {
+              text-decoration: underline; }
+          html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-date {
+            display: inline-block;
+            margin-right: 2rem; }
+            html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-date:before {
+              content: '';
+              display: inline-block;
+              height: 1rem;
+              vertical-align: bottom;
+              padding: 1.2rem;
+              margin: 0 1rem 0 0;
+              background: url("../UI/icons/clock.svg") no-repeat 0 0.8rem;
+              background-size: 2.4rem; }
+          html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-tag {
+            display: inline-block;
+            color: #000; }
+            html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-tag:before {
+              content: '';
+              display: inline-block;
+              height: 1rem;
+              vertical-align: bottom;
+              padding: 1.2rem;
+              margin: 0 1rem 0 0;
+              background: url("../UI/icons/tag.svg") no-repeat 0 0.8rem;
+              background-size: 2.4rem; }
+            html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-tag:hover {
+              text-decoration: underline; }
+        html body #wrapper #main-section article.generated-thread .topic-generated-content {
+          color: #333;
+          text-shadow: 0 0 0.1rem #EEE; }
+          html body #wrapper #main-section article.generated-thread .topic-generated-content .topic-author-notes {
+            background-color: #EEE;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            padding: 2rem;
+            text-align: justify; }
+            html body #wrapper #main-section article.generated-thread .topic-generated-content .topic-author-notes .post-controllers {
+              margin-top: 2rem; }
+              html body #wrapper #main-section article.generated-thread .topic-generated-content .topic-author-notes .post-controllers a {
+                display: inline-block;
+                padding: 0.2rem 0.8rem;
+                color: #FFF;
+                background-color: #888;
+                margin-left: 1rem;
+                border: solid 0.1rem #666; }
+                html body #wrapper #main-section article.generated-thread .topic-generated-content .topic-author-notes .post-controllers a:first-of-type {
+                  margin-left: 0; }
+                html body #wrapper #main-section article.generated-thread .topic-generated-content .topic-author-notes .post-controllers a:hover {
+                  -webkit-transition: background-color 1.5s, border 1s;
+                  -moz-transition: background-color 1.5s, border 1s;
+                  -ms-transition: background-color 1.5s, border 1s;
+                  -o-transition: background-color 1.5s, border 1s;
+                  transition: background-color 1.5s, border 1s;
+                  border-color: #FFF;
+                  background-color: #777; }
+        html body #wrapper #main-section article.generated-thread .topic-comments {
+          font-size: 2rem;
+          padding: 2rem;
+          margin-top: 1rem;
+          background-color: #EEE; }
+          html body #wrapper #main-section article.generated-thread .topic-comments div {
+            vertical-align: top;
+            margin-right: 1rem;
+            padding: 1rem;
+            display: inline-block; }
+          html body #wrapper #main-section article.generated-thread .topic-comments .user-reply-image {
+            vertical-align: top; }
+          html body #wrapper #main-section article.generated-thread .topic-comments .reply-content {
+            display: inline-block;
+            width: 80%; }
+            html body #wrapper #main-section article.generated-thread .topic-comments .reply-content h3 {
+              padding-bottom: 0.2rem; }
+              html body #wrapper #main-section article.generated-thread .topic-comments .reply-content h3 a {
+                color: #555; }
+            html body #wrapper #main-section article.generated-thread .topic-comments .reply-content .post-reply-date {
+              display: inline-block;
+              padding-bottom: 1rem; }
+              html body #wrapper #main-section article.generated-thread .topic-comments .reply-content .post-reply-date:before {
+                content: '';
+                display: inline-block;
+                height: 1rem;
+                vertical-align: bottom;
+                padding: 1.2rem;
+                margin: 0 1rem 0 0;
+                background: url("../UI/icons/clock.svg") no-repeat 0 0.8rem;
+                background-size: 2.4rem; }
       html body #wrapper #main-section article.category {
         background-color: #EEE;
         padding: 1rem;
