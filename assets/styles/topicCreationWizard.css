@@ -68,6 +68,7 @@ html body .container #modal {
         font-size: 1.4rem;
         display: block;
         width: 96%;
-        border: none; }
+        border: none;
+        resize: vertical; }
 
 /*# sourceMappingURL=topicCreationWizard.css.map */
