@@ -2,6 +2,7 @@ CREATE TABLE WebsiteTopics
 (
 topicID int(9) NOT NULL auto_increment,
 topic_icon INTEGER NOT NULL,
+topic_category VARCHAR(40) NOT NULL,
 topic_name VARCHAR(40) NOT NULL,
 topic_content VARCHAR(2000) NOT NULL,
 posted_by VARCHAR(40) NOT NULL,
