@@ -38,10 +38,14 @@
                     $_SESSION['login_string'] = hash('sha512', $password . $user_browser);
                     return true;
                 } else {
-                    echo "Wrong password";
+                    $error = "Invalid password!";
+                    include 'templates/errMessage.php';
+                    //WRONG PASSWORD
                 }
             } else {
-                echo "Wrong user";
+                $error = "The user name does not exist!";
+                include 'templates/errMessage.php';
+                //WRONG USER
                 // No user exists.
                 return false;
             }
