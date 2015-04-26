@@ -8,6 +8,7 @@ html body .container #modal_trigger {
   font-size: 1.3rem;
   font-weight: bold;
   color: #666;
+  text-align: center;
   padding: 1rem;
   background: #EEE;
   border: solid 0.1rem #CCC;
