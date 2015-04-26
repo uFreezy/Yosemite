@@ -1,0 +1,18 @@
+CREATE TABLE CatInfo
+(
+catID int(9) NOT NULL auto_increment,
+cat_icon INTEGER NOT NULL,
+cat_name VARCHAR(40) NOT NULL,
+last_topic_by VARCHAR(40) NOT NULL,
+last_topic_date DATE NOT NULL,
+last_topic_name VARCHAR(40) NOT NULL,
+PRIMARY KEY(catID)
+);
+
+INSERT INTO catinfo (cat_name) VALUES ("FAQ")
+INSERT INTO catinfo (cat_name) VALUES ("Events")
+INSERT INTO catinfo (cat_name) VALUES ("General discussion")
+INSERT INTO catinfo (cat_name) VALUES ("News")
+INSERT INTO catinfo (cat_name) VALUES ("Feedback - Suggestions/Bugs")
+INSERT INTO catinfo (cat_name) VALUES ("Spam - Talk about everything")
+INSERT INTO catinfo (cat_name) VALUES ("Trash")
