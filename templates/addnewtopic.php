@@ -40,15 +40,21 @@
     $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
     $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
-    $_SESSION['username'] = 'testuser';
+    $_SESSION['username'] = 'testuser'; // temporary here for testing.
+
     if(isset($_POST['status']) && isset($_SESSION['username'])) {
-        echo "yolo";
         $topicTitle = $_POST['topicName'];
         $topicContent = $_POST['topicContent'];
         $topicCategory = $_POST['topicCategory'];
         $date = date("Y/m/d");
         $tags = $_POST['topicTag'];
+        $line = mysql_query("SELECT * FROM websitetopics WHERE topic_name = '$topicTitle'") or die(mysql_error());
 
+        if($row = mysql_fetch_array($line)) {
+            echo "Topic with that title already exits. We don't want to cause the
+                  developers headache so please choose different name.";
+            exit();
+        }
         $sql = "INSERT INTO
                         websitetopics(topic_icon,
                                topic_category,
@@ -64,6 +70,22 @@
         if($result)
         {
             echo "Successfully added new topic!";
+
+            $sql = "SELECT
+                    topicID
+                FROM
+                    websitetopics
+                WHERE
+                    topic_name = '$topicTitle'";
+            $result = mysql_query($sql);
+            $row = mysql_fetch_assoc($result);
+            $filename =  "topics/" . $row['topicID'] . ".php";
+            echo $filename;
+            $myfile = fopen($filename, "w") or die("Unable to open file!");
+            $txt = "John Doe\n";
+            fwrite($myfile, $txt);
+            fclose($myfile);
+
         }
 
     }

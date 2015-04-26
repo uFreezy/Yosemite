@@ -10,9 +10,21 @@ $mainStyle = 'assets/styles/main.css';
 session_start();
 
 include "login.php";
+
+$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
+$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
+
 $IsNotLogged = !isset($_SESSION['username']);
 if(isset($_SESSION['username'])) {
-    $welcomeMessage = "Welcome, " . $_SESSION['username'];
+    $line = mysql_query("SELECT * FROM websiteusers WHERE userName = '$_SESSION[username]'") or die(mysql_error());
+    $line = mysql_fetch_array($line);
+
+    if($line['is_admin']) {
+        $welcomeMessage = "Welcome, " . "<a href='#'><span style='color: red'>" . $_SESSION['username']. "</span></a>";
+    }
+    else {
+        $welcomeMessage = "Welcome, " .  $_SESSION['username'];
+    }
 }
 //HEADER
 include 'templates/header.php';

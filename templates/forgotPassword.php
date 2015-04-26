@@ -10,7 +10,7 @@
     <!--HEADER-->
     <header id="header-bar">
         <!--MAIN HEADING/LOGO-->
-        <a href="#" title="Alpha-Programming" class="logo"><img src="../assets/UI/alpha-programming-logo.png" alt=""/></a>
+        <a href="../index.php" title="Alpha-Programming" class="logo"><img src="../assets/UI/alpha-programming-logo.png" alt=""/></a>
         <!--MAIN NAVIGATION-->
         <nav id="header-main-navigation">
             <ul>
@@ -97,8 +97,7 @@
             else {
                 echo 'Incorrect answer';
             }
-            // Destroying the session to avoid bugs.
-            session_destroy();
+
         }
         if(isset($_POST['submitpass']) && isset($_POST['newpassword']) && isset($_SESSION['email'])) {
             // Encrypt the new password.
@@ -107,6 +106,9 @@
             $query = "UPDATE websiteusers SET pass = '$newpassword' WHERE email = '$_SESSION[email]'";
             //Update the password in the database.
             $data = mysql_query($query) or die(mysql_error());
+            // Destroying the session to avoid bugs.
+            session_destroy();
+            echo "Password changed!";
         }
         ?>
 

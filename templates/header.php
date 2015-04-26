@@ -24,7 +24,7 @@
         <h1 id="main-heading">
             <a href="#" title="Alpha-Programming">
                 <?php
-                echo "<img id=\"company-logo\" src=\"$path/assets/UI/alpha-programming-logo.png\" alt=\"alpha-programming logo\" width=\"240\" height=\"40\"/>";
+                echo "<a href='../index.php'><img id=\"company-logo\" src=\"$path/assets/UI/alpha-programming-logo.png\" alt=\"alpha-programming logo\" width=\"240\" height=\"40\"/></a>";
                 ?>
             </a>
         </h1>
