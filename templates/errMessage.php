@@ -5,7 +5,7 @@
     <title>An error occurred</title>
 </head>
 <body>
-    <div class="login-err-msg" style="background-color: red">
+    <div class="login-err-msg">
         <?php
         "../login.php";
         echo "<p>$error</p>";
