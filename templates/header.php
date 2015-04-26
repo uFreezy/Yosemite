@@ -24,7 +24,7 @@
         <h1 id="main-heading">
             <a href="#" title="Alpha-Programming">
                 <?php
-                echo '<img id="company-logo" src="'.$path.'/assets/UI/alpha-programming-logo.png'.'" alt="alpha-programming logo" width="240" height="40"/>';
+                echo "<img id=\"company-logo\" src=\"$path/assets/UI/alpha-programming-logo.png\" alt=\"alpha-programming logo\" width=\"240\" height=\"40\"/>";
                 ?>
             </a>
         </h1>
@@ -32,9 +32,9 @@
         <nav id="header-main-navigation">
             <ul>
                 <?php
-                echo '<li><a href="'.$path.'" title="Home">Home</a></li>';
-                echo '<li><a href="#" title="Users">Users</a></li>';
-                echo '<li><a href="#" title="Contact Admin">Contacts</a></li>';
+                echo "<li><a href=\"$path\" title=\"Home\">Home</a></li>";
+                echo "<li><a href=\"#\" title=\"Users\">Users</a></li>";
+                echo "<li><a href=\"#\" title=\"Contact Admin\">Contacts</a></li>";
                 ?>
             </ul>
         </nav>
@@ -49,7 +49,10 @@
                 <a href=\"$path/templates/register.php\" title=\"Register\" id=\"register-btn\">Register</a>
              </form>";
         } else {
-            echo $welcomeMessage;
+            echo "<div id=\"welcome-board\">
+                    <p id=\"welcome-msg\">$welcomeMessage</p>
+                    <a id='logout-btn' href=\"#\">logout</a>
+                </div>";
         }
         ?>
     </header>

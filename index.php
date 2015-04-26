@@ -12,7 +12,6 @@ session_start();
 include "login.php";
 $IsNotLogged = !isset($_SESSION['username']);
 if(isset($_SESSION['username'])) {
-
     $welcomeMessage = "Welcome, " . $_SESSION['username'];
 }
 //HEADER

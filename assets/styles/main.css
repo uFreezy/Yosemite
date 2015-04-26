@@ -51,6 +51,34 @@ html {
               html body #header-bar-wrapper #header-bar #header-main-navigation ul li a {
                 color: #333;
                 font-weight: bold; }
+        html body #header-bar-wrapper #header-bar #welcome-board {
+          padding: 0.5rem 0.5rem 0 3rem;
+          background: url("../UI/icons/head.svg") no-repeat 0 1rem;
+          background-size: 2rem;
+          height: 100%;
+          float: right; }
+          html body #header-bar-wrapper #header-bar #welcome-board #welcome-msg {
+            color: #000;
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: bold; }
+          html body #header-bar-wrapper #header-bar #welcome-board #logout-btn {
+            display: inline-block;
+            font-size: 1.4rem;
+            color: #333;
+            padding: 0.7rem;
+            margin-left: 1rem;
+            background-color: #CCC;
+            border: solid 0.1rem #999; }
+            html body #header-bar-wrapper #header-bar #welcome-board #logout-btn:hover {
+              background-color: #BBB;
+              color: #FFF;
+              border-color: #FFF;
+              -webkit-transition: background-color 2s, color 0.5s, border 0.5s;
+              -moz-transition: background-color 2s, color 0.5s, border 0.5s;
+              -ms-transition: background-color 2s, color 0.5s, border 0.5s;
+              -o-transition: background-color 2s, color 0.5s, border 0.5s;
+              transition: background-color 2s, color 0.5s, border 0.5s; }
         html body #header-bar-wrapper #header-bar form {
           vertical-align: top;
           margin-top: 0.5rem;
