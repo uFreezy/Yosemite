@@ -19,6 +19,15 @@ $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_
 ?>
 
 <section id="main-section">
+    <header id="path">
+        <h1>
+            <?php
+            $DocumentSelf = dirname(__DIR__).'/'.basename($_SERVER['PHP_SELF'], '.php');
+            $DocumentSelf = str_replace('\\', '/', $DocumentSelf);
+            echo $DocumentSelf;
+            ?>
+        </h1>
+    </header>
 <?php include "createTopicWizard.php"; ?>
 
     <?php
