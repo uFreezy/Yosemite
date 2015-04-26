@@ -7,10 +7,14 @@
     <meta name="keywords" content="Yosemite, Programming, Developing, HTML, JavaScripts, CSharp, Java, PHP"/>
     <title>Alpha-Programming</title>
     <?php
-    echo '<link rel="stylesheet" href="'.$stylesPath.'"/>';
+    echo "<link rel=\"stylesheet\" href=\"$path/assets/styles/main.css\"/>".
+         "<link rel=\"stylesheet\" href=\"$path/assets/styles/topicCreationWizard.css\"/>".
+         "<link rel=\"stylesheet\" href=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css\" />".
+         "<script src=\"$path/scripts/libs/jquery-2.1.3.min.js\"></script>".
+         "<script src=\"$path/scripts/listeners.js\"></script>".
+         "<script type=\"text/javascript\" src=\"$path/scripts/libs/jquery.leanModal.min.js\"></script>";
+
     ?>
-    <!--LIBS-->
-    <script src="scripts/libs/jquery-2.1.3.min.js"></script>
 </head>
 <body>
 <div id="header-bar-wrapper">

@@ -1,31 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
 html, body, form, input, label, button {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-html {
-  font: 10px 'Arial', sans-serif; }
-  html body {
-    background-color: #EEE;
-    text-align: center; }
-  html #topic-wizard {
-    margin: 0 auto;
-    font-family: 'Custum', serif;
-    font-size: 1.8rem;
-    text-align: left;
-    padding: 1rem;
-    background-color: #EEE;
-    width: 80rem;
-    border: solid 0.1rem #CCC; }
-    html #topic-wizard input, html #topic-wizard label {
+html body .container #modal_trigger {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background: #EEE;
+  border: solid 0.1rem #CCC;
+  margin: 1rem auto;
+  width: 10rem;
+  display: block;
+  text-decoration: none; }
+html body .container #modal {
+  display: none; }
+  html body .container #modal.popupContainer {
+    position: absolute;
+    width: 58rem;
+    height: auto;
+    left: 45%;
+    top: 8rem;
+    background: #EEE; }
+  html body .container #modal .popupHeader {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background: #F4F4F2;
+    position: relative;
+    padding: 1rem 2rem;
+    border-bottom: 0.1rem solid #DDD;
+    font-weight: bold; }
+    html body .container #modal .popupHeader .modal_close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 1rem 1.5rem;
+      background: #DDD;
+      cursor: pointer;
+      color: #aaa;
+      font-size: 1.6rem; }
+    html body .container #modal .popupHeader .header_title {
+      color: #AAA; }
+  html body .container #modal .popupBody {
+    padding: 2rem; }
+    html body .container #modal .popupBody #topic-wizard {
       width: 100%;
-      height: 4rem;
-      margin-top: 1rem;
-      padding: 1rem;
-      display: block; }
-    html #topic-wizard textarea {
-      display: block;
-      border: none;
-      width: 100%; }
+      height: 100%;
+      text-align: left; }
+      html body .container #modal .popupBody #topic-wizard .topic-input {
+        font-size: 1.4rem;
+        padding: 1rem;
+        margin: 1rem 0 1rem 0;
+        display: block;
+        width: 100%;
+        height: 4rem; }
+      html body .container #modal .popupBody #topic-wizard #category-select {
+        margin-left: 1rem; }
+      html body .container #modal .popupBody #topic-wizard .topic-label {
+        font-size: 1.2rem;
+        color: #666; }
+        html body .container #modal .popupBody #topic-wizard .topic-label:nth-of-type(4) {
+          display: block;
+          margin-top: 1rem; }
+      html body .container #modal .popupBody #topic-wizard #topic-content {
+        padding: 1rem;
+        margin: 1rem 0 1rem 0;
+        font-size: 1.4rem;
+        display: block;
+        width: 96%;
+        border: none; }
 
 /*# sourceMappingURL=topicCreationWizard.css.map */

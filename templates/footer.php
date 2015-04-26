@@ -50,6 +50,5 @@
 </footer>
 </div>
 <!--SCRIPTS-->
-<script src="scripts/listeners.js"></script>
 </body>
 </html>

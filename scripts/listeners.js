@@ -24,4 +24,7 @@ $(document).ready(function () {
             loginForm.submit();
         }
     });
+
+    //MODAL LISTENER
+    $("#modal_trigger").leanModal({top : 120, overlay : 0.6, closeButton: ".modal_close" });
 });

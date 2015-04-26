@@ -4,32 +4,90 @@ html, body, form, input, label, button {
   box-sizing: border-box;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
+
+
 html {
-  font: 10px 'Arial', sans-serif;
   body {
-    background-color: #EEE;
-    text-align: center;
-  }
-  #topic-wizard {
-    margin: 0 auto;
-    font-family: 'Custum', serif;
-    font-size: 1.8rem;
-    text-align: left;
-    padding: 1rem;
-    background-color: #EEE;
-    width: 80rem;
-    border: solid 0.1rem #CCC;
-    input, label {
-      width: 100%;
-      height: 4rem;
-      margin-top: 1rem;
-      padding: 1rem;
-      display: block;
-    }
-    textarea {
-      display: block;
-      border: none;
-      width: 100%;
+    .container {
+      #modal_trigger {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        background: #EEE;
+        border: solid 0.1rem #CCC;
+        margin: 1rem auto;
+        width: 10rem;
+        display: block;
+        text-decoration: none;
+      }
+      #modal {
+        display: none;
+        &.popupContainer {
+          position:absolute;
+          width: 58rem;
+          height: auto;
+          left: 45%;
+          top: 8rem;
+          background: #EEE;
+        }
+        .popupHeader {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          background: #F4F4F2;
+          position: relative;
+          padding: 1rem 2rem;
+          border-bottom:  0.1rem solid #DDD;
+          font-weight:bold;
+          .modal_close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 1rem 1.5rem;
+            background: #DDD;
+            cursor: pointer;
+            color: #aaa;
+            font-size: 1.6rem;
+          }
+          .header_title {
+            color: #AAA;
+          }
+        }
+        .popupBody {
+          padding: 2rem;
+          #topic-wizard {
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            .topic-input {
+              font-size: 1.4rem;
+              padding: 1rem;
+              margin: 1rem 0 1rem 0;
+              display: block;
+              width: 100%;
+              height: 4rem;
+            }
+            #category-select {
+              margin-left: 1rem;
+            }
+            .topic-label {
+              font-size: 1.2rem;
+              color: #666;
+              &:nth-of-type(4) {
+                display: block;
+                margin-top: 1rem;
+              }
+            }
+            #topic-content {
+              padding: 1rem;
+              margin: 1rem 0 1rem 0;
+              font-size: 1.4rem;
+              display: block;
+              width: 96%;
+              border: none;
+            }
+          }
+        }
+      }
     }
   }
 }

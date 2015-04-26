@@ -2,6 +2,11 @@
 $path = '../';
 $stylesPath = '../assets/styles/main.css';
 
+$IsNotLogged = !isset($_SESSION['username']);
+if(isset($_SESSION['username'])) {
+
+    $welcomeMessage = "Welcome, " . $_SESSION['username'];
+}
 include 'header.php';
 
 define('DB_HOST', 'localhost');
@@ -14,6 +19,8 @@ $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_
 ?>
 
 <section id="main-section">
+<?php include "createTopicWizard.php"; ?>
+
     <?php
         $sql = "SELECT
                     topic_category,

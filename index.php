@@ -1,7 +1,7 @@
 <?php
 //YOUR LOGIC HERE
 $path = './';
-$stylesPath = 'assets/styles/main.css';
+$mainStyle = 'assets/styles/main.css';
 
 //LOGIN NOTICE login.php is here and your variables/logic is here
 // then you use your variables/logic from here into PHP TEMPLATES
