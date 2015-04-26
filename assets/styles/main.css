@@ -271,10 +271,9 @@ html {
 
 .login-err-msg {
   position: absolute;
-  z-index: 100;
   font-size: 1.6rem;
   color: #F00;
   top: 4rem;
-  left: 50%; }
+  left: 76%; }
 
 /*# sourceMappingURL=main.css.map */

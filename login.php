@@ -43,7 +43,7 @@
                     //WRONG PASSWORD
                 }
             } else {
-                $error = "The user name does not exist!";
+                $error = "Invalid username!";
                 include 'templates/errMessage.php';
                 //WRONG USER
                 // No user exists.
