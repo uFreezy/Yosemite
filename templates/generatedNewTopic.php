@@ -1,5 +1,6 @@
 <?php
 $path = '../';
+session_start();
 $IsNotLogged = !isset($_SESSION['username']);
 if (isset($_SESSION['username'])) {
     $welcomeMessage = "Welcome, " . $_SESSION['username'];

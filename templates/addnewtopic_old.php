@@ -41,7 +41,7 @@
     $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
     $_SESSION['username'] = 'testuser'; // temporary here for testing.
-
+    var_dump($_SESSION);
     if(isset($_POST['status']) && isset($_SESSION['username'])) {
         $topicTitle = $_POST['topicName'];
         $topicContent = $_POST['topicContent'];
@@ -49,6 +49,8 @@
         $date = date("Y/m/d");
         $tags = $_POST['topicTag'];
         $line = mysql_query("SELECT * FROM websitetopics WHERE topic_name = '$topicTitle'") or die(mysql_error());
+        $row = mysql_fetch_array($line);
+        $postedBy = $row['posted_by'];
 
         if($row = mysql_fetch_array($line)) {
             echo "Topic with that title already exits. We don't want to cause the
@@ -80,10 +82,44 @@
             $result = mysql_query($sql);
             $row = mysql_fetch_assoc($result);
             $filename =  "topics/" . $row['topicID'] . ".php";
-            echo $filename;
+            //echo $filename;
+            $template = '<?php
+                        $path = "../../";
+                        session_start();
+                        $IsNotLogged = !isset($_SESSION["username"]);
+                        if (isset($_SESSION["username"])) {
+                        $welcomeMessage = "Welcome, " . $_SESSION["username"];
+                        }
+                        include "../header.php";
+                        ?>
+                        <section id="main-section">
+                        <article class="generated-thread">
+                        <header class="generated-thread-heading">
+                        <h1>'. $topicTitle .'</h1>
+                        </header>
+                        <footer class="generated-thread-footer">
+                        <a class="user-img-link" href="#" title="user">
+                        <img class="user-img" src="../assets/UI/icons/default-user-profile.png" width="90" height="90" alt="profile-image"/>
+                        </a>
+                        <a href="#" title="posted by" class="topic-created-by">'. $postedBy .'</a>
+                        <p class="topic-date">'. $date .'</p>
+                        <a href="#" title="tags" class="topic-tag">FAQ</a>
+                        </footer>
+                        <div class="topic-generated-content">
+                        <div class="topic-author-notes">
+                        <p>'. $topicContent .'</p>
+                        <div class="post-controllers">
+                        <a href="#" title="response button">Response</a>
+                        <a href="#" title="abuse button">Report abuse</a>
+                        </div>
+                        </div>
+                        </article>
+                        </section>
+                        <?php
+                        include "../footer.php";
+                        ?>';
             $myfile = fopen($filename, "w") or die("Unable to open file!");
-            $txt = "John Doe\n";
-            fwrite($myfile, $txt);
+            fwrite($myfile, $template);
             fclose($myfile);
 
         }

@@ -41,6 +41,7 @@ include 'header.php';
 
     <?php
         $sql = "SELECT
+                    topicID,
                     topic_category,
                     topic_name,
                     topic_content,
@@ -57,14 +58,13 @@ include 'header.php';
         {
             echo 'The topics could not be displayed, please try again later.';
         }
-
         while($row = mysql_fetch_assoc($result))
         {
             echo'<article class="important-category category sticky">';
             echo'<div class="topic-info">';
             echo'<header>';
             echo'<h1>';
-            echo'<a href="templates/faq.php" title="">'. $row["topic_name"] . '</a>';
+            echo'<a href="topics/' . $row["topicID"] . '.php' .'" title="">'. $row["topic_name"] . '</a>';
             echo'</h1>';
             echo'</header>';
             echo'<footer>';
