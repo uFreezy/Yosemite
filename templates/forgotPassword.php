@@ -44,7 +44,7 @@
             if($row = mysql_fetch_array($line))
             {
                 $question = mysql_query("SELECT secret_question FROM websiteusers WHERE email = '$_POST[email]'") or die(mysql_error());
-                // Gets the row from MYSQL which contains the email adress.
+                // Gets the row from MYSQL which contains the email address.
                 $question =  mysql_fetch_array($question);
                 $_SESSION['email'] = $_POST['email'];
                 $_SESSION['hidefield'] = true;
@@ -65,15 +65,14 @@
                     default:
                 }
                 ?>
-                <p> <?php echo $question['secret_question']?></p>
+                <p style="font-size: 18px; color: #000000; font-weight: bold;">
+                    <?php echo $question['secret_question']?></p>
                 <input type="text" name="answer" placeholder="Security answer..." class="answer"/>
                 <input type="submit" value="Submit" name="submitanswer" class="submit"/>
 
         <?php }
             else { ?>
-                    <p>User doesnt exist.</p>
-                    <input type="email" name="email" placeholder="Email..." class="email"/>
-                    <input type="submit" value="Submit" name="submit" class="submit"/>
+                    <p style="font-size: 18px; color: #000000; font-weight: bold;">User doesnt exist.</p>
         <?php    }
 
         } if(!isset($_SESSION['hidefield'])) { ?>
@@ -95,7 +94,7 @@
 
             <?php }
             else {
-                echo 'Incorrect answer';
+                echo "<p style='font-size: 18px; color: #000000; font-weight: bold;'>Incorrect answer.</p>";
             }
 
         }

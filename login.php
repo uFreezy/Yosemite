@@ -38,7 +38,7 @@
                     $_SESSION['login_string'] = hash('sha512', $password . $user_browser);
                     return true;
                 } else {
-                    $error = "Invalid password!";
+                    $error = "Invalid Password";
                     include 'templates/errMessage.php';
                     //WRONG PASSWORD
                 }
