@@ -51,7 +51,7 @@
         } else {
             echo "<div id=\"welcome-board\">
                     <p id=\"welcome-msg\">$welcomeMessage</p>
-                    <a id='logout-btn' href=\"#\">logout</a>
+                    <a id='logout-btn' href=\"logout.php\">logout</a>
                 </div>";
         }
         ?>
