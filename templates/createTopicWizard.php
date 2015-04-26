@@ -30,7 +30,7 @@
                 <label class="topic-label" for="topic-tag">Tag</label>
                 <input type="text" id="topic-tag" class="topic-input" name="topicTag" placeholder="Tag..." required="required"/>
                 <!--SUBMIT-->
-                <input type="submit" name="status" class="modal_close topic-input" value="Submit"/>
+                <input type="submit" id="create-topic-btn" name="status" class="modal_close topic-input" value="Create topic"/>
             </form>
         </section>
     </div>

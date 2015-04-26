@@ -17,11 +17,21 @@ html {
         text-align: center;
         padding: 1rem;
         background: #FFF;
-        border: solid 0.1rem #CCC;
+        border: solid 0.1rem #666;
         margin: 1rem 0;
         width: 10rem;
         display: block;
         text-decoration: none;
+        &:hover {
+          color: #000;
+          background-color: #666;
+          border: solid 0.1rem #FFF;
+          -webkit-transition: background-color 1.5s, color 1s, border 0.2s;
+          -moz-transition: background-color 1.5s, color 1s, border 0.2s;
+          -ms-transition: background-color 1.5s, color 1s, border 0.2s;
+          -o-transition: background-color 1.5s, color 1s, border 0.2s;
+          transition: background-color 1.5s, color 1s, border 0.2s;
+        }
       }
       #modal {
         display: none;
@@ -73,7 +83,7 @@ html {
               margin-left: 1rem;
             }
             .topic-label {
-              font-size: 1.2rem;
+              font-size: 1.4rem;
               color: #666;
               &:nth-of-type(4) {
                 display: block;
@@ -88,6 +98,17 @@ html {
               width: 96%;
               border: none;
               resize: vertical;
+            }
+            #create-topic-btn:hover {
+              cursor: pointer;
+              -webkit-transition: background-color 2s, border 2s, color 1s;
+              -moz-transition: background-color 2s, border 2s, color 1s;
+              -ms-transition: background-color 2s, border 2s, color 1s;
+              -o-transition: background-color 2s, border 2s, color 1s;
+              transition: background-color 2s, border 2s, color 1s;
+              background-color: rgba(0, 255, 0, 0.5);
+              border: solid 0.1rem #0F0;
+              color: #FFF;
             }
           }
         }
