@@ -37,7 +37,9 @@ include 'header.php';
             ?>
         </h1>
     </header>
-<?php include "createTopicWizard.php"; ?>
+<?php
+    include "createTopicWizard.php";
+?>
 
     <?php
         $sql = "SELECT

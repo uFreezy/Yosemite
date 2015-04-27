@@ -97,6 +97,7 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
             $welcomeMessage = "Welcome, " . $_SESSION["username"];
         }
         include "../header.php";
+        include "../replyPostWizard.php";
         ?>
         <section id="main-section">
             <article class="generated-thread">
@@ -115,7 +116,7 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
                     <div class="topic-author-notes">
                         <p>'. $topicContent .'</p>
                         <div class="post-controllers">
-                            <a href="#" title="response button">Response</a>
+                            <a id="modal_trigger" href="#modal" title="reply button" class="btn">Response</a>
                             <a href="#" title="abuse button">Report abuse</a>
                         </div>
                     </div>
