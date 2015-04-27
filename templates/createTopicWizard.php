@@ -47,8 +47,8 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
     $date = date("Y/m/d");
     $tags = $_POST['topicTag'];
     $line = mysql_query("SELECT * FROM websitetopics WHERE topic_name = '$topicTitle'") or die(mysql_error());
-    $row = mysql_fetch_array($line);
-    $postedBy = $row['posted_by'];
+//    $getRow = mysql_fetch_assoc($line);
+//    $postedBy = $getRow['posted_by'];
 
     if($row = mysql_fetch_array($line)) {
         echo "Topic with that title already exits. We don't want to cause the
@@ -105,9 +105,9 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
                 </header>
                 <footer class="generated-thread-footer">
                     <a class="user-img-link" href="#" title="user">
-                        <img class="user-img" src="../assets/UI/icons/default-user-profile.png" width="90" height="90" alt="profile-image"/>
+                        <img class="user-img" src="../../assets/UI/icons/default-user-profile.jpg" width="90" height="90" alt="profile-image"/>
                     </a>
-                    <a href="#" title="posted by" class="topic-created-by">'. $postedBy .'</a>
+                    <a href="#" title="posted by" class="topic-created-by">'. $_SESSION['username'] .'</a>
                     <p class="topic-date">'. $date .'</p>
                     <a href="#" title="tags" class="topic-tag">FAQ</a>
                 </footer>
