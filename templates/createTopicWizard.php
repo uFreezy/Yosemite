@@ -17,7 +17,7 @@
                 <textarea name="topicContent" id="topic-content" cols="30" rows="10" placeholder="Type..." required="required"></textarea>
                 <!--TOPIC CATEGORY-->
                 <label class="topic-label" for="category-select">Category</label>
-                <select id="category-select" name="topicCategory" id="topic-category">
+                <select id="category-select" name="topicCategory" class="topic-category">
                     <option value="FAQ" disabled>FAQ (only admins)</option>
                     <option value="Events" disabled>Events (only admins)</option>
                     <option value="General discussion">General Discussion</option>
@@ -92,6 +92,8 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
         $template = '<?php
         $path = "../../";
         session_start();
+        include "../../login.php";
+
         $IsNotLogged = !isset($_SESSION["username"]);
         if (isset($_SESSION["username"])) {
             $welcomeMessage = "Welcome, " . $_SESSION["username"];
