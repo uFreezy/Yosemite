@@ -18,13 +18,13 @@
                 <!--TOPIC CATEGORY-->
                 <label class="topic-label" for="category-select">Category</label>
                 <select id="category-select" name="topicCategory" id="topic-category">
-                    <option value="faq">FAQ</option>
-                    <option value="events">Events</option>
+                    <option value="faq" disabled>FAQ (only admins)</option>
+                    <option value="events" disabled>Events (only admins)</option>
                     <option value="general">General Discussion</option>
                     <option value="news">News</option>
                     <option value="feedback">Feedback</option>
                     <option value="spam">Spam</option>
-                    <option value="trash">Trash</option>
+                    <option value="trash" disabled>Trash</option>
                 </select>
                 <!--TOPIC TAG-->
                 <label class="topic-label" for="topic-tag">Tag</label>

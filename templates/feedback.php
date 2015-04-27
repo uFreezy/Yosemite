@@ -50,7 +50,7 @@ include 'header.php';
                 FROM
                     websitetopics
                 WHERE
-                    topic_category = 'FAQ'";
+                    topic_category = 'Feedback - Suggestions/Bugs'";
 
         $result = mysql_query($sql) or die(mysql_error());
 
