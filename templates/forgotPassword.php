@@ -1,3 +1,4 @@
+<?php session_start(); // Using session to keep the email & boolean variables between different requests. ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -27,23 +28,22 @@
     <form action="" method="post">
         <?php
             define('DB_HOST', 'localhost');
-            define('DB_NAME', 'sitetest');
-            define('DB_USER','root');
-            define('DB_PASSWORD','root');
+            define('DB_NAME', 'freezycl_1');
+            define('DB_USER','freezycl_1');
+            define('DB_PASSWORD','tapaka2000');
 
             $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
             $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
-            session_start(); // Using session to keep the email & boolean variables between different requests.
         ?>
         <?php if(isset($_POST['submit']) && !$_POST['email']== ""){
 
 
-            $line = mysql_query("SELECT * FROM websiteusers WHERE email = '$_POST[email]'") or die(mysql_error());
+            $line = mysql_query("SELECT * FROM WebsiteUsers WHERE email = '$_POST[email]'") or die(mysql_error());
 
             // Checks if user with the email entered exists.
             if($row = mysql_fetch_array($line))
             {
-                $question = mysql_query("SELECT secret_question FROM websiteusers WHERE email = '$_POST[email]'") or die(mysql_error());
+                $question = mysql_query("SELECT secret_question FROM WebsiteUsers WHERE email = '$_POST[email]'") or die(mysql_error());
                 // Gets the row from MYSQL which contains the email address.
                 $question =  mysql_fetch_array($question);
                 $_SESSION['email'] = $_POST['email'];
@@ -82,7 +82,7 @@
         <?php }
         if(isset($_POST['submitanswer']) && isset($_POST['answer'])) {
             // Gets the answer from the database so it can compare it with the user input.
-            $answer = mysql_query("SELECT secret_answer FROM websiteusers WHERE email = '$_SESSION[email]'") or die(mysql_error());
+            $answer = mysql_query("SELECT secret_answer FROM WebsiteUsers WHERE email = '$_SESSION[email]'") or die(mysql_error());
             $answer = mysql_fetch_array($answer);
 
             // Compare the user input with the value in the database
@@ -102,7 +102,7 @@
             // Encrypt the new password.
             $newpassword = md5($_POST['newpassword']);
             //Prepare the password update query.
-            $query = "UPDATE websiteusers SET pass = '$newpassword' WHERE email = '$_SESSION[email]'";
+            $query = "UPDATE WebsiteUsers SET pass = '$newpassword' WHERE email = '$_SESSION[email]'";
             //Update the password in the database.
             $data = mysql_query($query) or die(mysql_error());
             // Destroying the session to avoid bugs.

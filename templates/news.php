@@ -12,7 +12,7 @@ $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_
 
 $IsNotLogged = !isset($_SESSION['username']);
 if(isset($_SESSION['username'])) {
-    $line = mysql_query("SELECT * FROM websiteusers WHERE userName = '$_SESSION[username]'") or die(mysql_error());
+    $line = mysql_query("SELECT * FROM WebsiteUsers WHERE userName = '$_SESSION[username]'") or die(mysql_error());
     $line = mysql_fetch_array($line);
 
     if($line['is_admin']) {
@@ -49,7 +49,7 @@ include 'header.php';
                     posted_date,
                     posted_tags
                 FROM
-                    websitetopics
+                    WebsiteTopics
                 WHERE
                     topic_category = 'News'";
 

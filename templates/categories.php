@@ -17,7 +17,7 @@
                     last_topic_date,
                     last_topic_name
                 FROM
-                    catinfo
+                    CatInfo
                 WHERE
                     1";
 
@@ -76,7 +76,7 @@
         echo'<footer>';
         echo'<a href="#" class="topic-creator topic-meta" title="Last posted by">'. $row['last_topic_by'].'</a>';
         echo'<p class="topic-meta topic-date-creation">'. $row['last_topic_date'] .'</p>';
-        echo'<p class="topic-meta topic-tag">' . $row['last_topic_name'] . '</p>';
+        echo'<p class="topic-meta topic-tag">' . htmlentities($row['last_topic_name']) . '</p>';
         echo'</footer>';
         echo'</div>';
         echo'</article>';

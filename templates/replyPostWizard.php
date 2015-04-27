@@ -69,10 +69,10 @@
                </div>
                 <div class="reply-content">
                     <h3>
-                        <a href="#" title="user">'. $username .'</a>
+                        <a href="#" title="user">'. htmlentities($username) .'</a>
                     </h3>
                     <time datetime="11.11.1111" class="post-reply-date">'. $date .'</time>
-                    <p>'. $_POST['topicReplyContent'].'</p>
+                    <p>'. htmlentities($_POST['topicReplyContent']) .'</p>
             </div>
             </div>
             </article>

@@ -46,7 +46,7 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
     $topicCategory = $_POST['topicCategory'];
     $date = date("Y/m/d");
     $tags = $_POST['topicTag'];
-    $line = mysql_query("SELECT * FROM websitetopics WHERE topic_name = '$topicTitle'") or die(mysql_error());
+    $line = mysql_query("SELECT * FROM WebsiteTopics WHERE topic_name = '$topicTitle'") or die(mysql_error());
 //    $getRow = mysql_fetch_assoc($line);
 //    $postedBy = $getRow['posted_by'];
 
@@ -56,7 +56,7 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
         exit();
     }
     $sql = "INSERT INTO
-    websitetopics(
+    WebsiteTopics(
                   topic_icon,
                   topic_category,
                   topic_name,
@@ -66,7 +66,7 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
                   posted_tags)
     VALUES('1','$topicCategory','$topicTitle','$topicContent','$_SESSION[username]','$date','$tags')";
 
-    $updateCatInfo = "UPDATE catinfo
+    $updateCatInfo = "UPDATE CatInfo
                       SET last_topic_by = '$_SESSION[username]',
                           last_topic_date = '$date',
                           last_topic_name = '$topicTitle'
@@ -81,7 +81,7 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
         $sql = "SELECT
                       topicID
                 FROM
-                    websitetopics
+                    WebsiteTopics
                 WHERE
                     topic_name = '$topicTitle'";
 
@@ -104,19 +104,19 @@ if(isset($_POST['status']) && isset($_SESSION['username'])) {
         <section id="main-section">
             <article class="generated-thread">
                 <header class="generated-thread-heading">
-                    <h1>'. $topicTitle .'</h1>
+                    <h1>'. htmlentities($topicTitle) .'</h1>
                 </header>
                 <footer class="generated-thread-footer">
                     <a class="user-img-link" href="#" title="user">
                         <img class="user-img" src="../../assets/UI/icons/default-user-profile.jpg" width="90" height="90" alt="profile-image"/>
                     </a>
-                    <a href="#" title="posted by" class="topic-created-by">'. $_SESSION['username'] .'</a>
+                    <a href="#" title="posted by" class="topic-created-by">'. htmlentities($_SESSION['username']) .'</a>
                     <p class="topic-date">'. $date .'</p>
                     <a href="#" title="tags" class="topic-tag">FAQ</a>
                 </footer>
                 <div class="topic-generated-content">
                     <div class="topic-author-notes">
-                        <p>'. $topicContent .'</p>
+                        <p>'. htmlentities($topicContent) .'</p>
                         <div class="post-controllers">
                             <a id="modal_trigger" href="#modal" title="reply button" class="btn">Response</a>
                             <a href="#" title="abuse button">Report abuse</a>
