@@ -102,6 +102,7 @@
 
         // Inject the new comment.
         file_put_contents($fileID, $template, FILE_APPEND);
-
+        $secondsWait = 1;
+        echo '<meta http-equiv="refresh" content="'.$secondsWait.'">';
     }
 ?>
