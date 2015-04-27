@@ -46,7 +46,8 @@ include 'header.php';
                     topic_name,
                     topic_content,
                     posted_by,
-                    posted_date
+                    posted_date,
+                    posted_tags
                 FROM
                     websitetopics
                 WHERE
@@ -60,6 +61,12 @@ include 'header.php';
         }
         while($row = mysql_fetch_assoc($result))
         {
+            $tags = explode("," , $row['posted_tags']);
+            for($i = 0; $i < sizeof($tags); $i++){
+                $tags[$i] = "<a href='#' style='color: #000000;'>" . $tags[$i] . "</a>";
+            }
+            $resultTags = implode(',' , $tags);
+
             echo'<article class="important-category category sticky">';
             echo'<div class="topic-info">';
             echo'<header>';
@@ -70,7 +77,7 @@ include 'header.php';
             echo'<footer>';
             echo'<a href="#" class="topic-creator topic-meta" title="Created by">'. $row["posted_by"].'</a>';
             echo' <p class="topic-meta topic-date-creation">'. $row["posted_date"].'</p>';
-            echo'<p class="topic-meta topic-tag">Important</p>';
+            echo'<p class="topic-meta topic-tag">'  .$resultTags . '</p>';
             echo'</footer>';
             echo'</div>';
             echo'</article>';
