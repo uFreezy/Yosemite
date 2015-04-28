@@ -15,9 +15,8 @@
         <!--MAIN NAVIGATION-->
         <nav id="header-main-navigation">
             <ul>
-                <li><a href="#" title="Home">Home</a></li>
-                <li><a href="#" title="Users">Users</a></li>
-                <li><a href="#" title="FAQ">FAQ</a></li>
+                <li><a href="../index.php" title="Home">Home</a></li>
+                <li><a href="faq.php" title="FAQ">FAQ</a></li>
                 <li><a href="#" title="Contact Admin">Contacts</a></li>
             </ul>
         </nav>
@@ -95,6 +94,7 @@
             <?php }
             else {
                 echo "<p style='font-size: 18px; color: #000000; font-weight: bold;'>Incorrect answer.</p>";
+                session_destroy();
             }
 
         }
@@ -118,10 +118,9 @@
         <p class="footer-title">Powered by Team Yosemite</p>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">About US</a></li>
+                <li><a href="faq.php">FAQ</a></li>
             </ul>
         </nav>
     </div>

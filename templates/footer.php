@@ -4,20 +4,19 @@
         <h1>Powered by: Yosemite Team</h1>
         <div>
             <p>
-                Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.
-                No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.
+                Alpha-Programming is website for inspiring  programmers and help then with their education
+                as well as help them find the information they're looking for in much easier way.
             </p>
         </div>
         <div>
             <p>
-                Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.
-                No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.
+                The website is created by team of young students currently studying programming in <a href="http://softuni.bg">Softuni</a>.
             </p>
         </div>
         <div>
             <p>
-                Lorem ipsum dolor sit amet, et discere nonumes repudiare sed, liber volutpat mea an, eu falli adipiscing nam.
-                No blandit corrumpit pri. Mutat ornatus vel no, ex putant tractatos vis.
+                Using various technologies we managed to create environment for programmers to sharing knowledge, receive
+                help and learn about new things in the industry.
             </p>
         </div>
     </div>
