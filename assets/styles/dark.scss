@@ -1,0 +1,487 @@
+@import 'reset';
+@import 'theme';
+//@import 'crossBrowsers'; //MOBILE VERSIONS AKA RESPONSIVE
+@font-face {
+  font-family: 'Forum';
+  src: url('../fonts/Forum-Regular.otf');
+}
+@font-face {
+  font-family: 'Custum';
+  src: url('../fonts/Custum.woff2');
+}
+
+html {
+  font: $defaultFontSize + px $defaultFontFamily, sans-serif;
+  color: $defaultFontColor;
+  body {
+    font-family: 'Custum', serif;
+    background-color: #666;
+    #header-bar-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      #header-bar {
+        margin: 0 auto;
+        height: 4.2 + $defaultFontUnit;
+        width: 96 + $defaultFontUnit;
+        background-color: #222;
+        #main-heading {
+          display: inline-block;
+          vertical-align: top;
+          a {
+            #company-logo {
+              vertical-align: top;
+            }
+          }
+        }
+        #header-main-navigation {
+          display: inline-block;
+          padding: 1 + $defaultFontUnit 0 1 + $defaultFontUnit 0;
+          font-size: $mainNavFontSize;
+          ul {
+            display: inline-block;
+            li {
+              margin-left: 1 + $defaultFontUnit;
+              display: inline-block;
+              a {
+                color: #999;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        #welcome-board {
+          padding: 0.5rem 0.5rem 0 3rem;
+          background: url("../UI/icons/head.svg") no-repeat 0 1rem;
+          background-size: 2rem;
+          height: 100%;
+          float: right;
+          #welcome-msg {
+            color: #999;
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+          #logout-btn {
+            display: inline-block;
+            font-size: 1.4rem;
+            color: #333;
+            padding: 0.7rem;
+            margin-left: 1rem;
+            background-color: #CCC;
+            border: solid 0.1rem #999;
+            &:hover {
+              background-color: #BBB;
+              color: #FFF;
+              border-color: #FFF;
+              -webkit-transition: background-color 2s, color 0.5s, border 0.5s;
+              -moz-transition: background-color 2s, color 0.5s, border 0.5s;
+              -ms-transition: background-color 2s, color 0.5s, border 0.5s;
+              -o-transition: background-color 2s, color 0.5s, border 0.5s;
+              transition: background-color 2s, color 0.5s, border 0.5s;
+            }
+          }
+        }
+        form {
+          vertical-align: top;
+          margin-top: 0.5 + $defaultFontUnit;
+          display: inline-block;
+          #password-recovery {
+            margin-left: 1 + $defaultFontUnit;
+            color: $grey;
+            font-size: 1.2 + $defaultFontUnit;
+            text-decoration: underline;
+            &:hover {
+              color: #F00;
+            }
+          }
+          input {
+            padding: 0.5 + $defaultFontUnit;
+            margin-left: 0.5 + $defaultFontUnit;
+            width: 15.4 + $defaultFontUnit;
+            border: solid 0.1 + $defaultFontUnit #CCC;
+            background-color: #777;
+          }
+          #login-btn:hover {
+            background-color: rgba(0, 155, 0, 0.5);
+            border: solid 0.1 + $defaultFontUnit #0F0;
+            color: $white;
+          }
+          #register-btn,
+          #login-btn {
+            margin-left: 0.4rem;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.4 + $defaultFontUnit;
+            padding: 0.55 + $defaultFontUnit;
+            width: 6 + $defaultFontUnit;
+            background-color: rgba(155, 155, 155, 0.3);
+            border: solid 0.1 + $defaultFontUnit #AAA;
+            color: $white;
+          }
+          #login-btn {
+            margin-left: 1rem;
+          }
+          #register-btn:hover {
+            background-color: rgba(50, 100, 255, 0.5);
+            border: solid 0.1 + $defaultFontUnit #09F;
+            color: $white;
+          }
+          #login-btn:hover, #register-btn:hover {
+            -webkit-transition: color 1s, background-color 1s;
+            -moz-transition: color 1s, background-color 1s;
+            -ms-transition: color 1s, background-color 1s;
+            -o-transition: color 1s, background-color 1s;
+            transition: color 1s, background-color 1s, border 1s;
+          }
+        }
+      }
+    }
+    #wrapper {
+      background-color: #666;
+      width: 96 + $defaultFontUnit;
+      margin: 2 + $defaultFontUnit auto;
+      #fake-header {
+        height: 31.6 + $defaultFontUnit;
+        background: url("../UI/banner.jpg") no-repeat #EEE;
+        background-size: cover;
+        #header-bar-extended {
+          background-color: #222;
+          padding: 2 + $defaultFontUnit;
+          label {
+            font-size: 1.6 + $defaultFontUnit;
+            font-weight: bold;
+            color: $grey;
+            margin-right: 1 + $defaultFontUnit;
+          }
+        }
+        p {
+          font-size: 1.4 + $defaultFontUnit;
+          padding: 1 + $defaultFontUnit;
+          color: $white;
+        }
+      }
+      #agreements {
+        position: relative;
+        top: 18 + $defaultFontUnit;
+        background-color: rgba(155, 155, 155, 0.8);
+        padding: 0.4 + $defaultFontUnit;
+        font-family: 'Forum', sans-serif;
+        font-size: $agreementsFontSize;
+        color: $white;
+        text-align: right;
+        a {
+          text-decoration: underline;
+          color: $black;
+          &:hover {
+            color: $white;
+          }
+        }
+        #accept-agreements {
+          display: inline-block;
+          padding: 0.4 + $defaultFontUnit;
+          margin-left: 4 + $defaultFontUnit;
+          background-color: rgba(255, 255, 255, 0.2);
+          text-decoration: none;
+          border: solid 0.1 + $defaultFontUnit #EEE;
+          &:hover {
+            background-color: #555;
+            -webkit-transition: background-color 2.5s;
+            -moz-transition: background-color 2.5s;
+            -ms-transition: background-color 2.5s;
+            -o-transition: background-color 2.5s;
+            transition: background-color 2.5s;
+          }
+        }
+      }
+      #main-section {
+        #path {
+          background-color: $white;
+          font-size: 1 + $defaultFontUnit;
+          padding: 1 + $defaultFontUnit;
+          border-top: solid 0.1 + $defaultFontUnit #CCC;
+          border-bottom-left-radius: 0.5 + $defaultFontUnit;
+          border-bottom-right-radius: 0.5 + $defaultFontUnit;
+        }
+        article {
+          &.generated-thread {
+            background-color: #BBB;
+            padding: 2rem;
+            .generated-thread-heading {
+              background-color: #DDD;
+              h1 {
+                font-size: 2.8rem;
+                padding-top: 0.5rem;
+                color: #444;
+                text-align: center;
+                background-color: #CCC;
+              }
+            }
+            .generated-thread-footer {
+              background-color: #CCC;
+              padding: 0 0 2rem 2rem;
+              font-size: 2rem;
+              .user-img {
+                border: solid 0.1rem #FFF;
+                margin-right: 2rem;
+                vertical-align: middle;
+              }
+              .topic-created-by {
+                &:before {
+                  content: '';
+                  display: inline-block;
+                  height: 1rem;
+                  vertical-align: bottom;
+                  padding: 1.2rem;
+                  margin: 0 1rem 0 0;
+                  background: url("../UI/icons/head.svg") no-repeat 0 0.8rem;
+                  background-size: 2.4rem;
+                }
+                display: inline-block;
+                color: #000;
+                margin-right: 2rem;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              .topic-date {
+                &:before {
+                  content: '';
+                  display: inline-block;
+                  height: 1rem;
+                  vertical-align: bottom;
+                  padding: 1.2rem;
+                  margin: 0 1rem 0 0;
+                  background: url("../UI/icons/clock.svg") no-repeat 0 0.8rem;
+                  background-size: 2.4rem;
+                }
+                display: inline-block;
+                margin-right: 2rem;
+              }
+              .topic-tag {
+                &:before {
+                  content: '';
+                  display: inline-block;
+                  height: 1rem;
+                  vertical-align: bottom;
+                  padding: 1.2rem;
+                  margin: 0 1rem 0 0;
+                  background: url("../UI/icons/tag.svg") no-repeat 0 0.8rem;
+                  background-size: 2.4rem;
+                }
+                display: inline-block;
+                &:hover {
+                  text-decoration: underline;
+                }
+                color: #000;
+              }
+            }
+            .topic-generated-content {
+              color: #333;
+              text-shadow: 0 0 0.1rem #EEE;
+              .topic-author-notes {
+                background-color: #EEE;
+                font-size: 1.8rem;
+                line-height: 3rem;
+                padding: 2rem;
+                text-align: justify;
+                .post-controllers {
+                  margin-top: 2rem;
+                  a {
+                    display: inline-block;
+                    padding: 0.2rem 0.8rem;
+                    color: #FFF;
+                    background-color: #888;
+                    margin-left: 1rem;
+                    border: solid 0.1rem #666;
+                    &:first-of-type {
+                      margin-left: 0;
+                    }
+                    &:hover {
+                      -webkit-transition: background-color 1.5s, border 1s;
+                      -moz-transition: background-color 1.5s, border 1s;
+                      -ms-transition: background-color 1.5s, border 1s;
+                      -o-transition: background-color 1.5s, border 1s;
+                      transition: background-color 1.5s, border 1s;
+                      border-color: #FFF;
+                      background-color: #777;
+                    }
+                  }
+                }
+              }
+            }
+            .topic-comments {
+              div {
+                vertical-align: top;
+                margin-right: 1rem;
+                padding: 1rem;
+                display: inline-block;
+              }
+              font-size: 2rem;
+              padding: 2rem;
+              margin-top: 1rem;
+              background-color: #EEE;
+              .user-reply-image {
+                vertical-align: top;
+              }
+              .reply-content {
+                h3 {
+                  padding-bottom: 0.2rem;
+                  a {
+                    color: #555;
+                  }
+                }
+                .post-reply-date {
+                  &:before {
+                    content: '';
+                    display: inline-block;
+                    height: 1rem;
+                    vertical-align: bottom;
+                    padding: 1.2rem;
+                    margin: 0 1rem 0 0;
+                    background: url("../UI/icons/clock.svg") no-repeat 0 0.8rem;
+                    background-size: 2.4rem;
+                  }
+                  display: inline-block;
+                  padding-bottom: 1rem;
+                }
+                display: inline-block;
+                width: 80%;
+              }
+            }
+          }
+          &.category {
+            background-color: #222;
+            padding: 1 + $defaultFontUnit;
+            margin-top: 1 + $defaultFontUnit;
+            font-size: $categoriesFontSize;
+            //            height: 6 + $defaultFontUnit;
+            &:before {
+              content: '';
+              display: inline-block;
+              vertical-align: baseline;
+              margin: 1 + $defaultFontUnit 0 0 0;
+              width: 3.2 + $defaultFontUnit;
+              height: 3.2 + $defaultFontUnit;
+              background: url("../UI/icons/topic-icon.png") 0 0 no-repeat;
+              background-size: 3.2 + $defaultFontUnit;
+            }
+            &.sticky {
+              background-color: #555;
+              &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: baseline;
+                margin: 1 + $defaultFontUnit 0 0 0;
+                width: 3.2 + $defaultFontUnit;
+                height: 3.2 + $defaultFontUnit;
+                background: url("../UI/icons/sticky-icon.png") 0 0 no-repeat;
+                background-size: 3.2 + $defaultFontUnit;
+              }
+            }
+            &.trash {
+              &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: baseline;
+                margin: 1 + $defaultFontUnit 0 0 0;
+                width: 3.2 + $defaultFontUnit;
+                height: 3.2 + $defaultFontUnit;
+                background: url("../UI/icons/trash-icon.png") 0 0 no-repeat;
+                background-size: 3.2 + $defaultFontUnit;
+              }
+            }
+            .topic-info {
+              padding: 0.5 + $defaultFontUnit;
+              margin-left: 1 + $defaultFontUnit;
+              display: inline-block;
+              header {
+                h1 {
+                  a {
+                    color: #999;
+                  }
+                }
+              }
+              footer {
+                .topic-creator {
+                  background: url("../UI/icons/head.svg") 0 0.5 + $defaultFontUnit no-repeat;
+                }
+                .topic-date-creation {
+                  background: url("../UI/icons/clock.svg") 0 0.5 + $defaultFontUnit no-repeat;
+                }
+                .topic-tag {
+                  background: url("../UI/icons/tag.svg") 0 0.5 + $defaultFontUnit no-repeat;
+                }
+                .topic-meta {
+                  display: inline-block;
+                  margin: 0.8 + $defaultFontUnit 0 0 2 + $defaultFontUnit;
+                  padding-left: 2.6 + $defaultFontUnit;
+                  font-size: 2 + $defaultFontUnit;
+                  color: #999;
+                  background-size: 2 + $defaultFontUnit;
+                  cursor: default;
+                  &:first-child {
+                    cursor: pointer;
+                    margin-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      #main-footer {
+        margin-top: 1 + $defaultFontUnit;
+        background-color: #222;
+        color: #666;
+        #footer-top {
+          padding: 1 + $defaultFontUnit;
+          text-align: center;
+          height: 100%;
+          div {
+            font-size: 1.4 + $defaultFontUnit;
+            vertical-align: top;
+            margin-left: 1 + $defaultFontUnit;
+            padding: 1 + $defaultFontUnit;
+            display: inline-block;
+            width: 30%;
+            height: 70%;
+            border-right: dashed 0.1 + $defaultFontUnit #666;
+            &:first-of-type {
+              margin-left: 0;
+            }
+            &:last-of-type {
+              border: none;
+            }
+            p {
+              text-align: left;
+            }
+          }
+          h1 {
+            padding: 1 + $defaultFontUnit;
+          }
+        }
+        #footer-bottom {
+          background-color: #444;
+          text-align: center;
+          padding: 1 + $defaultFontUnit;
+          border-bottom: solid 1 + $defaultFontUnit #222;
+          .validator {
+            display: inline-block;
+            margin-left: 1 + $defaultFontUnit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login-err-msg {
+  position: absolute;
+  font-size: 1.6rem;
+  color: #F00;
+  top: 4rem;
+  left: 76%;
+}
+
