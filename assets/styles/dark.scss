@@ -281,6 +281,7 @@ html {
               color: #333;
               text-shadow: 0 0 0.1rem #EEE;
               .topic-author-notes {
+                word-break: break-all;
                 background-color: #EEE;
                 font-size: 1.8rem;
                 line-height: 3rem;
@@ -313,6 +314,7 @@ html {
             }
             .topic-comments {
               div {
+                word-break: break-all;
                 vertical-align: top;
                 margin-right: 1rem;
                 padding: 1rem;
