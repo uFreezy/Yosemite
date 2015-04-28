@@ -206,20 +206,20 @@ html {
         }
         article {
           &.generated-thread {
-            background-color: #BBB;
+            background-color: #444;
             padding: 2rem;
             .generated-thread-heading {
               background-color: #DDD;
               h1 {
                 font-size: 2.8rem;
                 padding-top: 0.5rem;
-                color: #444;
+                color: #CCC;
                 text-align: center;
-                background-color: #CCC;
+                background-color: #666;
               }
             }
             .generated-thread-footer {
-              background-color: #CCC;
+              background-color: #666;
               padding: 0 0 2rem 2rem;
               font-size: 2rem;
               .user-img {
@@ -239,7 +239,7 @@ html {
                   background-size: 2.4rem;
                 }
                 display: inline-block;
-                color: #000;
+                color: #CCC;
                 margin-right: 2rem;
                 &:hover {
                   text-decoration: underline;
@@ -256,6 +256,7 @@ html {
                   background: url("../UI/icons/clock.svg") no-repeat 0 0.8rem;
                   background-size: 2.4rem;
                 }
+                color: #CCC;
                 display: inline-block;
                 margin-right: 2rem;
               }
@@ -274,15 +275,15 @@ html {
                 &:hover {
                   text-decoration: underline;
                 }
-                color: #000;
+                color: #CCC;
               }
             }
             .topic-generated-content {
-              color: #333;
+              color: #CCC;
               text-shadow: 0 0 0.1rem #EEE;
               .topic-author-notes {
                 word-break: break-all;
-                background-color: #EEE;
+                background-color: #777;
                 font-size: 1.8rem;
                 line-height: 3rem;
                 padding: 2rem;
@@ -323,7 +324,7 @@ html {
               font-size: 2rem;
               padding: 2rem;
               margin-top: 1rem;
-              background-color: #EEE;
+              background-color: #777;
               .user-reply-image {
                 vertical-align: top;
               }
@@ -331,7 +332,7 @@ html {
                 h3 {
                   padding-bottom: 0.2rem;
                   a {
-                    color: #555;
+                    color: #FFF;
                   }
                 }
                 .post-reply-date {
@@ -401,7 +402,7 @@ html {
               header {
                 h1 {
                   a {
-                    color: #999;
+                    color: #CCC;
                   }
                 }
               }
@@ -420,7 +421,7 @@ html {
                   margin: 0.8 + $defaultFontUnit 0 0 2 + $defaultFontUnit;
                   padding-left: 2.6 + $defaultFontUnit;
                   font-size: 2 + $defaultFontUnit;
-                  color: #999;
+                  color: #CCC;
                   background-size: 2 + $defaultFontUnit;
                   cursor: default;
                   &:first-child {

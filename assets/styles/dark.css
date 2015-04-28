@@ -179,18 +179,18 @@ html {
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem; }
       html body #wrapper #main-section article.generated-thread {
-        background-color: #BBB;
+        background-color: #444;
         padding: 2rem; }
         html body #wrapper #main-section article.generated-thread .generated-thread-heading {
           background-color: #DDD; }
           html body #wrapper #main-section article.generated-thread .generated-thread-heading h1 {
             font-size: 2.8rem;
             padding-top: 0.5rem;
-            color: #444;
+            color: #CCC;
             text-align: center;
-            background-color: #CCC; }
+            background-color: #666; }
         html body #wrapper #main-section article.generated-thread .generated-thread-footer {
-          background-color: #CCC;
+          background-color: #666;
           padding: 0 0 2rem 2rem;
           font-size: 2rem; }
           html body #wrapper #main-section article.generated-thread .generated-thread-footer .user-img {
@@ -199,7 +199,7 @@ html {
             vertical-align: middle; }
           html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-created-by {
             display: inline-block;
-            color: #000;
+            color: #CCC;
             margin-right: 2rem; }
             html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-created-by:before {
               content: '';
@@ -213,6 +213,7 @@ html {
             html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-created-by:hover {
               text-decoration: underline; }
           html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-date {
+            color: #CCC;
             display: inline-block;
             margin-right: 2rem; }
             html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-date:before {
@@ -226,7 +227,7 @@ html {
               background-size: 2.4rem; }
           html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-tag {
             display: inline-block;
-            color: #000; }
+            color: #CCC; }
             html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-tag:before {
               content: '';
               display: inline-block;
@@ -239,11 +240,11 @@ html {
             html body #wrapper #main-section article.generated-thread .generated-thread-footer .topic-tag:hover {
               text-decoration: underline; }
         html body #wrapper #main-section article.generated-thread .topic-generated-content {
-          color: #333;
+          color: #CCC;
           text-shadow: 0 0 0.1rem #EEE; }
           html body #wrapper #main-section article.generated-thread .topic-generated-content .topic-author-notes {
             word-break: break-all;
-            background-color: #EEE;
+            background-color: #777;
             font-size: 1.8rem;
             line-height: 3rem;
             padding: 2rem;
@@ -271,7 +272,7 @@ html {
           font-size: 2rem;
           padding: 2rem;
           margin-top: 1rem;
-          background-color: #EEE; }
+          background-color: #777; }
           html body #wrapper #main-section article.generated-thread .topic-comments div {
             word-break: break-all;
             vertical-align: top;
@@ -286,7 +287,7 @@ html {
             html body #wrapper #main-section article.generated-thread .topic-comments .reply-content h3 {
               padding-bottom: 0.2rem; }
               html body #wrapper #main-section article.generated-thread .topic-comments .reply-content h3 a {
-                color: #555; }
+                color: #FFF; }
             html body #wrapper #main-section article.generated-thread .topic-comments .reply-content .post-reply-date {
               display: inline-block;
               padding-bottom: 1rem; }
@@ -338,7 +339,7 @@ html {
           margin-left: 1rem;
           display: inline-block; }
           html body #wrapper #main-section article.category .topic-info header h1 a {
-            color: #999; }
+            color: #CCC; }
           html body #wrapper #main-section article.category .topic-info footer .topic-creator {
             background: url("../UI/icons/head.svg") 0 0.5rem no-repeat; }
           html body #wrapper #main-section article.category .topic-info footer .topic-date-creation {
@@ -350,7 +351,7 @@ html {
             margin: 0.8rem 0 0 2rem;
             padding-left: 2.6rem;
             font-size: 2rem;
-            color: #999;
+            color: #CCC;
             background-size: 2rem;
             cursor: default; }
             html body #wrapper #main-section article.category .topic-info footer .topic-meta:first-child {

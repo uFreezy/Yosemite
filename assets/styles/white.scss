@@ -206,7 +206,7 @@ html {
         }
         article {
           &.generated-thread {
-            background-color: #BBB;
+            background-color: #FFF;
             padding: 2rem;
             .generated-thread-heading {
               background-color: #DDD;
@@ -215,11 +215,11 @@ html {
                 padding-top: 0.5rem;
                 color: #444;
                 text-align: center;
-                background-color: #CCC;
+                background-color: #DDD;
               }
             }
             .generated-thread-footer {
-              background-color: #CCC;
+              background-color: #DDD;
               padding: 0 0 2rem 2rem;
               font-size: 2rem;
               .user-img {
