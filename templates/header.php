@@ -6,9 +6,47 @@
     <meta name="author" content="Yosemite Team"/>
     <meta name="keywords" content="Yosemite, Programming, Developing, HTML, JavaScripts, CSharp, Java, PHP"/>
     <title>Alpha-Programming</title>
+
     <?php
-    echo "<link rel=\"stylesheet\" href=\"$path/assets/styles/main.css\"/>".
-         "<link rel=\"stylesheet\" href=\"$path/assets/styles/topicCreationWizard.css\"/>".
+    //SET THEME
+    $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/main.css\"/>";
+    if (!isset($_SESSION['theme'])) {
+//        $_SESSION['theme'] = 'main';
+        if (isset($_POST['themeChangeRequest'], $_POST['theme'])) {
+            $_SESSION['theme'] = $_POST['theme'];
+            if ($_SESSION['theme'] === 'dark') {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/dark.css\"/>";
+            } else if ($_SESSION['theme'] === 'white') {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/white.css\"/>";
+            } else {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/main.css\"/>";
+            }
+        }
+    } else {
+        if (isset($_POST['themeChangeRequest'], $_POST['theme'])) {
+            $_SESSION['theme'] = $_POST['theme'];
+            if ($_SESSION['theme'] === 'dark') {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/dark.css\"/>";
+            } else if ($_SESSION['theme'] === 'white') {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/white.css\"/>";
+            } else {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/main.css\"/>";
+            }
+        } else {
+            $theme = $_SESSION['theme'];
+            if ($_SESSION['theme'] === 'dark') {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/dark.css\"/>";
+            } else if ($_SESSION['theme'] === 'white') {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/white.css\"/>";
+            } else {
+                $theme = "<link rel=\"stylesheet\" href=\"$path/assets/styles/main.css\"/>";
+            }
+        }
+    }
+
+    //CHANGE THEME
+    echo $theme;
+    echo "<link rel=\"stylesheet\" href=\"$path/assets/styles/topicCreationWizard.css\"/>".
          "<link rel=\"stylesheet\" href=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css\" />".
          "<script src=\"$path/scripts/libs/jquery-2.1.3.min.js\"></script>".
          "<script src=\"$path/scripts/listeners.js\"></script>".
@@ -62,14 +100,15 @@
         <!--HEADER EXTENDER-->
         <div id="header-bar-extended">
             <!--THEME CHOOSER-->
-            <label for="theme-choose">Theme</label>
-            <select id="theme-choose" name="theme">
-                <option value="" selected="selected" disabled="disabled">Select</option>
-                <option value="default">Default</option>
-                <option value="white">White</option>
-                <option value="dark">Dark</option>
-            </select>
-
+            <form action="#" id="change-theme" method="post">
+                <label for="theme-choose">Theme</label>
+                <select id="theme-choose" name="theme">
+                    <option value="" selected="selected" disabled="disabled">Select</option>
+                    <option value="default">Default</option>
+                    <option value="white">White</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </form>
         </div>
         <p>Welcome to Alpha-Programming</p>
     </div>
