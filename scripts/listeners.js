@@ -27,4 +27,29 @@ $(document).ready(function () {
 
     //MODAL LISTENER
     $("#modal_trigger").leanModal({top : 120, overlay : 0.6, closeButton: ".modal_close" });
+
+    //CHANGE CSS
+    function changeCSS(cssFile, cssLinkIndex) {
+
+        var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+        var newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", cssFile);
+
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    }
+
+    $('#theme-choose').change(function() {
+        var element = $('#theme-choose');
+
+        if (element.val() == 'dark') {
+            changeCSS('assets/styles/dark.css', 0);
+        } else if (element.val() == 'white') {
+            changeCSS('assets/styles/white.css', 0);
+        } else {
+            changeCSS('assets/styles/main.css', 0);
+        }
+    })
 });
